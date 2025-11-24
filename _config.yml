@@ -1,3 +1,11 @@
 theme: jekyll-theme-minimal
-title: The Voltaire Press
+title: Voltaire Press
 description: Writing, Poetry, and Metaphysical News
+
+# This enables real layouts
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
