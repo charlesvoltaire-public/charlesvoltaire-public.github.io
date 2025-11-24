@@ -3,35 +3,28 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }} – Voltaire Press</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/minimal-css/2.4.0/minimal.min.css">
   <style>
     body { max-width: 680px; margin: 40px auto; padding: 0 20px; line-height: 1.6; font-family: serif; }
-    header h1 { color: black; text-decoration: none; }
+    header h1 { margin: 0 0 1.5rem; font-size: 2.4em; }
     header h1 a { color: black; text-decoration: none; }
     header nav { margin: 2rem 0; padding-bottom: 0.8rem; border-bottom: 1px solid #eee; font-size: 1.1em; }
     header nav a { color: black; text-decoration: none; margin-right: 2rem; position: relative; }
     header nav a:hover, header nav a.active { color: #333; }
-    header nav a:hover:after, header nav a.active:after { 
-      content: ""; position: absolute; bottom: -4px; left: 0; width: 100%; height: 1px; background: #333; 
-    }
+    header nav a:hover:after, header nav a.active:after { content: ""; position: absolute; bottom: -4px; left: 0; width: 100%; height: 1px; background: #333; }
     .dropdown { position: relative; display: inline-block; }
-    .dropdown-content { 
-      display: none; position: absolute; background: white; min-width: 160px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-      padding: 0.8rem 0; margin-top: 0.5rem; border: 1px solid #eee; font-size: 0.95em; z-index: 1;
-    }
+    .dropdown-content { display: none; position: absolute; background: white; min-width: 160px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 0.8rem 0; margin-top: 0.5rem; border: 1px solid #eee; font-size: 0.95em; z-index: 1; }
     .dropdown:hover .dropdown-content { display: block; }
     .dropdown-content a { display: block; padding: 0.4rem 1.2rem; margin: 0; }
-    .breadcrumb { margin: 2rem 0 1.5rem; font-size: 0.95em; color: #666; }
-    footer { margin-top: 8rem; padding-top: 2rem; border-top: 1px solid #eee; font-size: 0.85em; color: #666; text-align: center; }
+    footer { margin-top: 8rem; padding-top: 2rem; border-top 1px solid #eee; font-size: 0.85em; color: #666; text-align: center; }
   </style>
 </head>
 <body>
   <header>
+    <h1><a href="/">Voltaire Press</a></h1>
     <nav>
       <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
       <a href="/authors/" {% if page.url contains '/authors/' %}class="active"{% endif %}>Authors</a>
-
       <div class="dropdown">
         <a href="#" {% if page.url contains '/poetry/' or page.url contains '/long-form/' or page.url contains '/short-story/' %}class="active"{% endif %}>Writing ▼</a>
         <div class="dropdown-content">
@@ -40,26 +33,11 @@
           <a href="/poetry/">Poetry</a>
         </div>
       </div>
-
       <a href="/news/" {% if page.url contains '/news/' %}class="active"{% endif %}>Metaphysical News</a>
     </nav>
   </header>
 
   <main>
-    {% if page.url != "/" %}
-    <nav class="breadcrumb">
-      <a href="/">Voltaire Press</a>
-      {% if page.layout == "author" %} › <a href="/authors/">Authors</a>{% endif %}
-      {% if page.layout == "poem" %} › <a href="/poetry/">Poetry</a>{% endif %}
-      {% if page.layout == "news" %} › <a href="/news/">Metaphysical News</a>{% endif %}
-      {% if page.layout == "longform" %} › <a href="/long-form/">Long Form</a>{% endif %}
-      {% if page.layout == "shortstory" %} › <a href="/short-story/">Short Story</a>{% endif %}
-      {% if page.title and page.url != "/poetry/" and page.url != "/authors/" and page.url != "/news/" and page.url != "/long-form/" and page.url != "/short-story/" %}
-      › {{ page.title }}
-      {% endif %}
-    </nav>
-    {% endif %}
-
     {{ content }}
   </main>
 
