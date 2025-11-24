@@ -6,12 +6,12 @@
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/minimal-css/2.4.0/minimal.min.css">
   <style>
-    body { max-width: 680px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+    body { max-width: 680px; margin: 40px auto; padding: 0 20px; line-height: 1.6; font-family: serif; }
     header nav { margin-bottom: 3rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
     header nav a { margin-right: 1.5rem; text-decoration: none; color: #0066cc; }
     header nav a:hover { text-decoration: underline; }
-    footer { margin-top: 5rem; font-size: 0.9em; color: #666; }
-    pre, blockquote { background: #f9f9f9; padding: 1rem; border-left: 4px solid #0066cc; }
+    footer { margin-top: 8rem; padding-top: 2rem; border-top: 1px solid #eee; font-size: 0.85em; color: #666; text-align: center; }
+    .poem { white-space: pre-line; }
   </style>
 </head>
 <body>
@@ -31,7 +31,7 @@
   </main>
 
   <footer>
-    <p>Published from iPads · Dedicated to the commons · No rights reserved</p>
+    Last updated {{ site.time | date: "%B %d, %Y at %H:%M UTC" }}
   </footer>
 </body>
 </html>
