@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<p style="margin: 2rem 0 1rem;">
+  ← <a href="/authors/">All authors</a>
+</p>
+
+<h1 style="margin: 0 0 1.5rem; font-size: 2em;">{{ page.title }}</h1>
+
+<div style="line-height: 1.7; margin-bottom: 3rem;">
+  {{ content }}
+</div>
+
+<h2 style="margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem;">
+  Works
+</h2>
+
+{% assign author_works = site.pages | where: 'author', page.title | sort: 'date' | reverse %}
+{% for work in author_works %}
+{% if work.layout == "poem" or work.layout == "fiction" or work.layout == "news" %}
+- <a href="{{ work.url }}">{{ work.title }}</a>
+{% endif %}
+{% endfor %}
+
+<div style="margin-top: 3rem; display: flex; justify-content: space-between; font-size: 0.95em; color: #0066cc;">
+  <div></div>
+  <div><a href="/">← Home</a></div>
+</div>
