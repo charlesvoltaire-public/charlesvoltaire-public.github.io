@@ -28,12 +28,6 @@
 </head>
 <body>
   <header>
-    {% if page.url == "/" or page.url contains "/authors/" or page.url contains "/poetry/" or page.url contains "/news/" or page.url contains "/long-form/" or page.url contains "/short-story/" %}
-    <h1>Voltaire Press</h1>
-    {% else %}
-    <h1><a href="/">Voltaire Press</a></h1>
-    {% endif %}
-
     <nav>
       <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
       <a href="/authors/" {% if page.url contains '/authors/' %}class="active"{% endif %}>Authors</a>
