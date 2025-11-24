@@ -1,21 +1,14 @@
 ---
 layout: default
+title: Authors
+permalink: /authors/
 ---
 
-<h1 style="margin: 0 0 1.5rem; font-size: 2em;">{{ page.title }}</h1>
-
-<div style="line-height: 1.7; margin-bottom: 3rem;">
-  {{ content }}
-</div>
-
-<h2 style="margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem;">
-  Works
-</h2>
-
-{% assign author_works = site.pages | where: 'author', page.title | sort: 'date' | reverse %}
-{% for work in author_works %}
-{% if work.layout == "poem" or work.layout == "fiction" or work.layout == "news" %}
-- <a href="{{ work.url }}">{{ work.title }}</a>
-{% endif %}
+{% assign author_list = site.pages | where: "layout", "author" | sort: "title" %}
+{% for author in author_list %}
+- <a href="{{ author.url }}">{{ author.title }}</a>
 {% endfor %}
 
+{% if author_list.size == 0 %}
+<p><em>No author pages yet.</em></p>
+{% endif %}
