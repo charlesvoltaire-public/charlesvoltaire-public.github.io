@@ -21,6 +21,7 @@
     }
     .dropdown:hover .dropdown-content { display: block; }
     .dropdown-content a { display: block; padding: 0.4rem 1.2rem; margin: 0; }
+    .breadcrumb { margin: 2rem 0 1.5rem; font-size: 0.95em; color: #666; }
     footer { margin-top: 8rem; padding-top: 2rem; border-top: 1px solid #eee; font-size: 0.85em; color: #666; text-align: center; }
   </style>
 </head>
@@ -45,6 +46,20 @@
   </header>
 
   <main>
+    {% if page.url != "/" %}
+    <nav class="breadcrumb">
+      <a href="/">Voltaire Press</a>
+      {% if page.layout == "author" %} › <a href="/authors/">Authors</a>{% endif %}
+      {% if page.layout == "poem" %} › <a href="/poetry/">Poetry</a>{% endif %}
+      {% if page.layout == "news" %} › <a href="/news/">Metaphysical News</a>{% endif %}
+      {% if page.layout == "longform" %} › <a href="/long-form/">Long Form</a>{% endif %}
+      {% if page.layout == "shortstory" %} › <a href="/short-story/">Short Story</a>{% endif %}
+      {% if page.title and page.url != "/poetry/" and page.url != "/authors/" and page.url != "/news/" and page.url != "/long-form/" and page.url != "/short-story/" %}
+      › {{ page.title }}
+      {% endif %}
+    </nav>
+    {% endif %}
+
     {{ content }}
   </main>
 
