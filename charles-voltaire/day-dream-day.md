@@ -6,8 +6,6 @@ author: Charles Voltaire
 categories: [poetry]
 ---
 
-# Day-dream-Day
-
 My eyes open slowly  
 and at first,  
 I don’t know where I am.
