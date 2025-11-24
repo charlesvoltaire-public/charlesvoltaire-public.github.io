@@ -1,8 +1,6 @@
 ---
-title: Voltaire Press
+title: Home
 ---
-
-# Voltaire Press
 
 Writing, Poetry, and Metaphysical News
 
