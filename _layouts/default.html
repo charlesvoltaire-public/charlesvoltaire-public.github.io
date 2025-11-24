@@ -28,6 +28,7 @@
   <header>
     <h1><a href="/">Voltaire Press</a></h1>
     <nav>
+      <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
       <a href="/authors/" {% if page.url contains '/authors/' %}class="active"{% endif %}>Authors</a>
 
       <div class="dropdown">
