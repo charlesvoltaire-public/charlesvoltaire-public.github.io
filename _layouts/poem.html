@@ -2,39 +2,30 @@
 layout: default
 ---
 
-<article>
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p><small>{{ page.date | date:"%B %d, %Y" }} — by {{ page.author }}</small></p>
-    <p style="margin-top:1rem;">
-      ← <a href="/poetry/">All poetry</a>
-    </p>
-  </header>
+<div style="margin-top: 3rem;"></div>
 
-  <div class="poem">
-    {{ content }}
+<p style="margin-bottom: 2rem;">
+  ← <a href="/poetry/">All poetry</a>
+</p>
+
+<h1 style="margin-bottom: 2.5rem; font-size: 2.2em;">{{ page.title }}</h1>
+
+<div class="poem" style="white-space: pre-line; font-size: 1.15em; line-height: 1.75;">
+  {{ content }}
+</div>
+
+<!-- Next / Previous links at bottom-right -->
+<div style="margin-top: 6rem; display: flex; justify-content: space-between; font-size: 0.95em;">
+  <div>
+    {% assign prev = site.pages | where_exp:"p","p.categories contains 'poetry'" | sort:'date' | reverse | where_exp:"p","p.date < page.date" | first %}
+    {% if prev %}
+    ← <a href="{{ prev.url }}">Previous</a>
+    {% endif %}
   </div>
-
-  {% if page.categories %}
-  <p style="margin-top:2rem;"><em>Filed under: {{ page.categories | join: ", " }}</em></p>
-  {% endif %}
-
-  <div style="margin-top:4rem; display:flex; justify-content:space-between;">
-    <div>
-      {% assign prev = site.pages | where_exp:"p","p.categories contains 'poetry'" | sort:'date' | reverse | where_exp:"p","p.date < page.date" | first %}
-      {% if prev %}
-      ← <a href="{{ prev.url }}">Previous poem</a>
-      {% endif %}
-    </div>
-    <div>
-      {% assign next = site.pages | where_exp:"p","p.categories contains 'poetry'" | sort:'date' | where_exp:"p","p.date > page.date" | first %}
-      {% if next %}
-      <a href="{{ next.url }}">Next poem →</a>
-      {% endif %}
-    </div>
+  <div>
+    {% assign next = site.pages | where_exp:"p","p.categories contains 'poetry'" | sort:'date' | where_exp:"p","p.date > page.date" | first %}
+    {% if next %}
+    <a href="{{ next.url }}">Next →</a>
+    {% endif %}
   </div>
-
-  <p style="margin-top:2rem;">
-    <a href="/">← Home</a>
-  </p>
-</article>
+</div>
