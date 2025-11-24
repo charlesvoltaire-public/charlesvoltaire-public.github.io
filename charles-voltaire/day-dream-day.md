@@ -1,6 +1,7 @@
 ---
+layout: poem
 title: Day-dream-Day
-date: 2019-01-01
+date: 2025-11-24
 author: Charles Voltaire
 categories: [poetry]
 ---
