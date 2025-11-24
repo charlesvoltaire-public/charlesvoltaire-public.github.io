@@ -4,18 +4,20 @@ title: Voltaire Press
 
 # Voltaire Press
 
-Writing, Poetry and the Metaphysical News
+Writing, Poetry, and Metaphysical News
 
 ## All posts
-{% assign all_posts = site.posts | where: "date", "" | concat: site.html_pages | where: "date", "" | sort: 'date' | reverse %}
-{% for post in all_posts limit: 10 %}
-{% if post.title %}
-- [{{ post.title }}]({{ post.url | relative_url }})
-  <small>— {{ post.date | date: "%b %d, %Y" }}{% if post.author %} by {{ post.author }}{% endif %}{% if post.categories %} ({{ post.categories | join: ", " }}){% endif %}</small>
+
+{% assign all_content = site.pages | where_exp: "p", "p.categories != nil" | sort: 'date' | reverse %}
+{% for page in all_content %}
+{% if page.title and page.date %}
+- [{{ page.title }}]({{ page.url | relative_url }})
+  <small>— {{ page.date | date:"%b %d, %Y" }}{% if page.author %} by {{ page.author }}{% endif %}{% if page.categories %} ({{ page.categories | join: ", " }}){% endif %}</small>
 {% endif %}
 {% endfor %}
-{% if all_posts.size == 0 %}
-<p><em>No posts yet — the first one is coming soon.</em></p>
+
+{% if all_content.size == 0 %}
+<em>No posts yet — the first one is coming soon.</em>
 {% endif %}
 
 [Poetry →](/poetry/)
