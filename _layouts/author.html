@@ -18,7 +18,7 @@ layout: default
 
 {% assign author_works = site.pages | where: 'author', page.title | sort: 'date' | reverse %}
 {% for work in author_works %}
-{% if work.layout == "poem" or work.layout == "fiction" or work.layout == "news" %}
-- <a href="{{ work.url }}">{{ work.title }}</a>
-{% endif %}
+  {% if work.layout == "poem" or work.layout == "fiction" or work.layout == "news" %}
+  - <a href="{{ work.url }}">{{ work.title }}</a>
+  {% endif %}
 {% endfor %}
