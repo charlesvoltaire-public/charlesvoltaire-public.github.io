@@ -1,4 +1,4 @@
-/* Voltaire Press — fully mobile-responsive + hamburger menu */
+/* Voltaire Press — mobile-perfect, logo full size, big readable menu */
 
 body {
   max-width: 680px;
@@ -8,6 +8,7 @@ body {
   color: #111;
   font-family: serif;
   line-height: 1.6;
+  font-size: 17px;          /* base text size — same feel as desktop */
 }
 
 /* Header */
@@ -21,20 +22,21 @@ body {
   position: relative;
 }
 
-/* Logo — responsive */
+/* Logo — SAME size on mobile and desktop */
 .logo {
-  height: 44px;           /* desktop */
+  height: 44px;             /* identical to desktop */
   width: auto;
+  display: block;
 }
 
-/* Hamburger button (visible only on mobile) */
+/* Hamburger */
 .hamburger {
   display: none;
   background: none;
   border: none;
-  font-size: 1.8em;
+  font-size: 1.9em;
   cursor: pointer;
-  padding: 0.2em;
+  color: #000;
 }
 
 /* Desktop nav */
@@ -51,11 +53,11 @@ body {
 
 /* ——— MOBILE ——— */
 @media (max-width: 720px) {
-  .logo { height: 38px; }                     /* slightly smaller on phone */
-  body { padding: 0 16px; margin: 12px auto 40px; }
+  body { padding: 0 16px; margin: 12px auto 40px; font-size: 16.5px; }  /* tiny reduction, still very readable */
 
   .hamburger { display: block; }
 
+  /* Hide the normal nav links in header */
   .site-nav {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -63,26 +65,28 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 100px;
-    gap: 2.4rem;
-    font-size: 1.4em;
+    padding-top: 130px;
+    gap: 3rem;
+    font-size: 1.35em;           /* huge, thumb-friendly menu text */
     transform: translateX(100%);
-    transition: transform 0.25s ease-out;
+    transition: transform 0.3s ease-out;
     z-index: 999;
   }
   .site-nav.open { transform: translateX(0); }
 
-  .site-nav a { color: #000; }
+  /* Subtle backdrop — tap outside to close */
+  .site-nav.open::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.07);
+    z-index: -1;
+  }
 }
 
-/* Rest of your existing styles (unchanged) */
+/* Rest unchanged */
 main { margin-top: 1rem; }
 .breadcrumb { margin: 2rem 0 1.5rem; font-size: 0.95em; color: #555; }
 h1 { margin: 0 0 2rem; font-size: 2.2em; }
 h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; }
-.prose { line-height: 1.3; font-size: 1.15em; margin: 0 0 2.5rem 0; white-space: pre-wrap; }
-.bio { line-height: 1.8; margin-bottom: 3rem; }
-.news-meta { margin: 0 0 2rem; color: #555; font-size: 0.95em; }
-.prose-content { line-height: 1.8; }
-.nav-links { display: flex; justify-content: space-between; font-size: 0.95em; color: #0066cc; margin-top: 2rem; }
-footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: 0.85em; color: #555; text-align: center; }
+.prose { line-height: 1.3; font-size: 1.15em; margin: 0 0
