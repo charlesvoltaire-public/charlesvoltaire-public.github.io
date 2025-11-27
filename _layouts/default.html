@@ -10,9 +10,14 @@
 
 <header>
   <div class="header-inner">
+    <!-- Left: Logo -->
     <div class="site-title">
-     <h1><a href="/"><img src="/assets/logo.svg" alt="Voltaire Press"></a></h1>
+      <a href="/">
+        <img src="/assets/logo.svg" alt="Voltaire Press" class="logo">
+      </a>
     </div>
+
+    <!-- Right: Navigation -->
     <nav class="site-nav">
       <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
       <a href="/authors/" {% if page.url contains '/authors/' %}class="active"{% endif %}>Authors</a>
