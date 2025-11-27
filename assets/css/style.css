@@ -1,4 +1,4 @@
-/* Voltaire Press — ABSOLUTE FINAL: hover/active = lighter black, no bold/underline/jump */
+/* Voltaire Press — TRUE FINAL: header hover perfect, maroon links restored, mobile menu fully working */
 
 * { box-sizing: border-box; }
 
@@ -17,18 +17,21 @@ body { max-width: 680px; margin: 20px auto 60px; padding: 0 20px; }
 .header-inner {
   display: flex; justify-content: space-between; align-items: center;
   padding: 1.2rem 0; border-bottom: 1px solid #eee; margin-bottom: 2rem;
+  position: relative;
 }
 
 .logo { height: 44px; width: auto; }
 
+/* Hamburger — only visible on mobile */
 .hamburger {
   display: none;
   background: none; border: none;
   font-size: 2em; cursor: pointer; color: #000;
   z-index: 10001;
+  position: relative;
 }
 
-/* Desktop nav — black → slightly lighter black on hover/active, no bold, no underline, no jump */
+/* Desktop nav — black → lighter black on hover/active, no jump */
 .site-nav {
   display: flex;
   gap: 1.6rem;
@@ -38,31 +41,9 @@ body { max-width: 680px; margin: 20px auto 60px; padding: 0 20px; }
   color: #000 !important;
   text-decoration: none !important;
   font-size: 1.05em;
-  font-weight: normal !important;          /* never bold */
+  font-weight: normal !important;
   transition: color 0.2s ease;
 }
 .site-nav a:hover,
 .site-nav a.active {
-  color: #333 !important;                  /* slightly lighter black */
-}
-
-/* MOBILE */
-@media (max-width: 720px) {
-  body { max-width: none; margin: 12px 0 60px; padding: 0 16px; }
-  .hamburger { display: block; }
-  .site-nav { display: none; }
-  .site-nav {
-    position: fixed; inset: 0;
-    background: #000 !important;
-    color: #fff !important;
-    display: flex !important;
-    flex-direction: column; align-items: center; justify-content: flex-start;
-    padding-top: 130px; gap: 2.8rem; font-size: 1.3em;
-    transform: translateX(100%); transition: transform 0.32s ease;
-    z-index: 10000;
-  }
-  .site-nav.open { transform: translateX(0); }
-  .site-nav a { color: #fff !important; }
-  .site-nav.open::after {
-    content: ""; position: fixed; inset: 0;
-    background: rgba(
+  color
