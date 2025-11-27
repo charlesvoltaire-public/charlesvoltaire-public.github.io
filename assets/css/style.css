@@ -1,4 +1,4 @@
-/* Voltaire Press — FINAL FINAL: header nav black, all other links maroon */
+/* Voltaire Press — ABSOLUTE FINAL: hover/active = lighter black, no bold/underline/jump */
 
 * { box-sizing: border-box; }
 
@@ -28,17 +28,23 @@ body { max-width: 680px; margin: 20px auto 60px; padding: 0 20px; }
   z-index: 10001;
 }
 
-/* Desktop nav — BLACK links only */
+/* Desktop nav — black → slightly lighter black on hover/active, no bold, no underline, no jump */
 .site-nav {
   display: flex;
   gap: 1.6rem;
   flex-wrap: nowrap;
 }
 .site-nav a {
-  color: #000 !important;               /* ← black */
-  text-decoration: none; font-size: 1.05em;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-size: 1.05em;
+  font-weight: normal !important;          /* never bold */
+  transition: color 0.2s ease;
 }
-.site-nav a:hover, .site-nav a.active { font-weight: 600; }
+.site-nav a:hover,
+.site-nav a.active {
+  color: #333 !important;                  /* slightly lighter black */
+}
 
 /* MOBILE */
 @media (max-width: 720px) {
@@ -56,30 +62,7 @@ body { max-width: 680px; margin: 20px auto 60px; padding: 0 20px; }
     z-index: 10000;
   }
   .site-nav.open { transform: translateX(0); }
-  .site-nav a { color: #fff !important; }        /* white in mobile menu */
+  .site-nav a { color: #fff !important; }
   .site-nav.open::after {
     content: ""; position: fixed; inset: 0;
-    background: rgba(255,255,255,0.12); z-index: -1;
-  }
-}
-
-/* ALL OTHER links (body, Previous/Next, etc.) — maroon */
-a, a:visited, .nav-links a, .breadcrumb a { color: #800020 !important; }
-a:hover, .nav-links a:hover, .breadcrumb a:hover { color: #a00020 !important; text-decoration: underline !important; }
-
-/* Poem text — normal size */
-.prose {
-  line-height: 1.34 !important;
-  font-size: 1.02em !important;
-  margin: 0 0 2.6rem 0 !important;
-  white-space: pre-wrap;
-}
-
-/* Headings */
-h1 { margin: 0 0 2rem; font-size: 2.2em; font-weight: normal; }
-h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; font-weight: normal; }
-
-/* Rest */
-main { margin-top: 1rem; }
-.breadcrumb { margin: 2rem 0 1.5rem; font-size: .95em; color: #555; }
-footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: .85em; color: #555; text-align: center; }
+    background: rgba(
