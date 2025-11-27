@@ -1,16 +1,17 @@
-/* Voltaire Press — FINAL mobile version (full-width, working hamburger)
+/* Voltaire Press — fixed mobile, desktop safe */
 
 body {
-  margin: 0 auto;
-  padding: 0 16px;
   max-width: 680px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
   background: #faf8f5;
   color: #111;
   font-family: serif;
   line-height: 1.6;
-  font-size: 17px;           /* same as desktop */
+  font-size: 17px;
 }
 
+/* Header — safe for desktop */
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -20,10 +21,11 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Logo — full size on all devices */
+/* Logo — same size everywhere */
 .logo {
   height: 44px;
   width: auto;
+  display: block;
 }
 
 /* Hamburger */
@@ -51,24 +53,26 @@ body {
 
 /* MOBILE — full width, working menu */
 @media (max-width: 720px) {
-  body { padding: 0 16px; }                     /* full width, tiny side padding */
-  
+  body { padding: 0 16px; }  /* full width, minimal side padding */
+
   .hamburger { display: block; }
 
-  /* Hide desktop nav links */
+  /* Hide desktop nav in header on mobile */
   .site-nav {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: #faf8f5;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding-top: 140px;
-    gap: 3.2rem;
-    font-size: 1.4em;            /* huge, easy to tap */
+    gap: 3rem;
+    font-size: 1.35em;  /* big, tap-friendly text */
     transform: translateX(100%);
-    transition: transform 0.28s ease-out;
+    transition: transform 0.3s ease-out;
     z-index: 1000;
   }
 
@@ -76,17 +80,23 @@ body {
     transform: translateX(0);
   }
 
-  /* Backdrop — tap to close */
-  body.nav-open::after {
+  /* Backdrop for closing on tap outside */
+  .site-nav.open + body::before {
     content: '';
     position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.08);
-    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.1);
+    z-index: -1;
   }
+
+  /* Rest unchanged on mobile */
+  main { margin-top: 1rem; }
 }
 
-/* Rest of your styles */
+/* Rest of styles (unchanged) */
 main { margin-top: 1rem; }
 .breadcrumb { margin: 2rem 0 1.5rem; font-size: 0.95em; color: #555; }
 h1 { margin: 0 0 2rem; font-size: 2.2em; }
