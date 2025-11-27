@@ -1,4 +1,4 @@
-/* Voltaire Press — FINAL: poem font everywhere + slightly smaller poem text */
+/* Voltaire Press — FINAL: normal poem size, maroon links, no wrapping nav */
 
 * { box-sizing: border-box; }
 
@@ -7,7 +7,6 @@ html, body {
   padding: 0;
   background: #faf8f5;
   color: #111;
-  /* Use the exact same poem font everywhere */
   font-family: Georgia, "Times New Roman", serif;
   font-size: 17.5px;
   line-height: 1.6;
@@ -41,64 +40,47 @@ body {
   z-index: 10001;
 }
 
-/* Desktop nav — same poem font, perfect spacing */
+/* Desktop nav — tighter, never wraps */
 .site-nav {
   display: flex;
-  gap: 1.8rem;
+  gap: 1.6rem;           /* reduced so it never wraps */
   flex-wrap: nowrap;
 }
 .site-nav a {
   color: #000;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1.05em;     /* slightly smaller so it fits perfectly */
 }
 .site-nav a:hover, .site-nav a.active { font-weight: 600; }
 
 /* MOBILE */
 @media (max-width: 720px) {
-  body {
-    max-width: none;
-    margin: 12px 0 60px;
-    padding: 0 16px;
-  }
-  .hamburger { display: block; }
-  .site-nav {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: #faf8f5;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 130px;
-    gap: 2.4rem;
-    font-size: 1.25em;
-    line-height: 1.4;
-    transform: translateX(100%);
-    transition: transform 0.32s ease;
-    z-index: 10000;
-  }
-  .site-nav.open { transform: translateX(0); }
-  .site-nav.open::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.12);
-    z-index: -1;
-  }
+  body { max-width: none; margin: 12px 0 60px; padding: 0 16px; }
+ .hamburger { display: block; }
+ .site-nav {
+   position: fixed; inset: 0; background: #faf8f5;
+   flex-direction: column; align-items: center; justify-content: flex-start;
+   padding-top: 130px; gap: 2.6rem; font-size: 1.28em;
+   transform: translateX(100%); transition: transform 0.32s ease;
+   z-index: 10000;
+ }
+ .site-nav.open { transform: translateX(0); }
+ .site-nav.open::after { content:""; position:fixed; inset:0; background:rgba(0,0,0,0.12); z-index:-1; }
 }
 
-/* Poem & prose — slightly smaller, perfect */
+/* Poem text — normal, beautiful size (no longer oversized) */
 .prose {
-  line-height: 1.3;
-  font-size: 1.08em;        /* reduced from 1.15em → now perfect */
-  margin: 0 0 2.5rem 0;
-  white-space: pre-wrap;
-}
+  { line-height: 1.34; font-size: 1.02em; margin: 0 0 2.6rem 0; white-space: pre-wrap; }
 
-/* Headings also in the same serif */
-h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: normal;
-  letter-spacing: -0.01em;
-}
-h1 { margin: 0 0 2rem;
+/* Maroon hyperlinks everywhere */
+a, a:visited { color: #800020; }           /* deep maroon */
+a:hover { color: #a00020; text-decoration: underline; }
+
+/* Headings */
+h1 { margin: 0 0 2rem; font-size: 2.2em; font-weight: normal; }
+h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; font-weight: normal; }
+
+/* Rest */
+main{margin-top:1rem}
+.breadcrumb{margin:2rem 0 1.5rem;font-size:.95em;color:#555}
+footer{padding-top:2rem;border-top:1px solid #eee;font-size:.85em;color:#555;text-align:center}
