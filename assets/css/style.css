@@ -1,4 +1,4 @@
-/* Voltaire Press — final perfect header + off-white */
+/* Voltaire Press — final perfect spacing with logo */
 
 body {
   max-width: 680px;
@@ -10,76 +10,48 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* Header — tighter, balanced spacing */
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 0;
+  padding: 1.4rem 0;        /* reduced from 2.5rem */
   border-bottom: 1px solid #eee;
 }
 
-/* Left title */
-.site-title h1 {
-  margin: 0;
-  font-size: 2.2em;
-}
-.site-title a {
-  color: #000;
-  text-decoration: none;
+/* Logo */
+.site-title img {
+  height: 42px;             /* adjust this number if your logo needs to be bigger/smaller */
+  width: auto;
+  display: block;
 }
 
-/* Right navigation */
+/* Navigation */
 .site-nav a {
-  margin-left: 2rem;
+  margin-left: 2.2rem;      /* perfect even spacing */
   color: #000;
   text-decoration: none;
   font-size: 1.1em;
 }
+.site-nav a:first-child { margin-left: 0; }   /* removes extra left space on first link */
 .site-nav a:hover,
 .site-nav a.active {
   font-weight: 600;
 }
 
-/* Main content */
-main { margin-bottom: 6rem; }
+/* Remove the old h1 text when using logo */
+.site-title h1 { display: none; }   /* hides "Voltaire Press" text when logo is present */
 
-/* Breadcrumbs */
-.breadcrumb {
-  margin: 2rem 0 1.5rem;
-  font-size: 0.95em;
-  color: #555;
-}
+/* Main content starts closer to header */
+main { margin-top: 2.5rem; }
 
-/* Headings */
+/* Rest of your styles (unchanged) */
+.breadcrumb { margin: 2rem 0 1.5rem; font-size: 0.95em; color: #555; }
 h1 { margin: 0 0 2rem; font-size: 2.2em; }
 h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; }
-
-/* Prose & poetry */
-.prose {
-  line-height: 1.3;
-  font-size: 1.15em;
-  margin: 0 0 2.5rem 0;
-  white-space: pre-wrap;
-}
+.prose { line-height: 1.3; font-size: 1.15em; margin: 0 0 2.5rem 0; white-space: pre-wrap; }
 .bio { line-height: 1.8; margin-bottom: 3rem; }
 .news-meta { margin: 0 0 2rem; color: #555; font-size: 0.95em; }
 .prose-content { line-height: 1.8; }
-
-/* Previous / Next */
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.95em;
-  color: #0066cc;
-  margin-top: 2rem;
-}
-
-/* Footer */
-footer {
-  padding-top: 2rem;
-  border-top: 1px solid #eee;
-  font-size: 0.85em;
-  color: #555;
-  text-align: center;
-}
+.nav-links { display: flex; justify-content: space-between; font-size: 0.95em; color: #0066cc; margin-top: 2rem; }
+footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: 0.85em; color: #555; text-align: center; }
