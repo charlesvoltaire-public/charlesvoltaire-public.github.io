@@ -21,22 +21,36 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1><a href="/">Voltaire Press</a></h1>
-    <nav>
-      <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
-      <a href="/authors/" {% if page.url contains '/authors/' %}class="active"{% endif %}>Authors</a>
-      <div class="dropdown">
-        <a href="#" {% if page.url contains '/poetry/' or page.url contains '/long-form/' or page.url contains '/short-story/' %}class="active"{% endif %}>Writing ▼</a>
+<header>
+  <div style="display:flex; justify-content:space-between; align-items:center; padding:2rem 0;">
+    <!-- Left: Logo -->
+    <div>
+      <h1 style="margin:0; font-size:2.2em;">
+        <a href="/" style="color:#000; text-decoration:none;">Voltaire Press</a>
+      </h1>
+    </div>
+
+    <!-- Right: Navigation -->
+    <nav style="font-size:1.1em;">
+      <a href="/" {% if page.url == "/" %}style="font-weight:600;"{% endif %}>Home</a>
+      <span style="margin:0 1.2rem; color:#ccc;">·</span>
+      <a href="/authors/" {% if page.url contains '/authors/' %}style="font-weight:600;"{% endif %}>Authors</a>
+      <span style="margin:0 1.2rem; color:#ccc;">·</span>
+
+      <div class="dropdown" style="display:inline-block;">
+        <a href="#" {% if page.url contains '/poetry/' or page.url contains '/long-form/' or page.url contains '/short-story/' %}style="font-weight:600;"{% endif %}>Writing ▼</a>
         <div class="dropdown-content">
           <a href="/long-form/">Long Form</a>
           <a href="/short-story/">Short Story</a>
           <a href="/poetry/">Poetry</a>
         </div>
       </div>
-      <a href="/news/" {% if page.url contains '/news/' %}class="active"{% endif %}>Metaphysical News</a>
+
+      <span style="margin:0 1.2rem; color:#ccc;">·</span>
+      <a href="/news/" {% if page.url contains '/news/' %}style="font-weight:600;"{% endif %}>Metaphysical News</a>
     </nav>
-  </header>
+  </div>
+</header>
 
   <main>
     {{ content }}
