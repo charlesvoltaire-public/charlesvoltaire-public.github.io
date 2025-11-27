@@ -1,9 +1,8 @@
-/* Voltaire Press — fixed mobile, desktop safe */
+/* Voltaire Press — FINAL: no theme interference, full mobile control */
 
-body {
-  max-width: 680px;
-  margin: 20px auto 40px;
-  padding: 0 20px;
+html, body {
+  margin: 0;
+  padding: 0;
   background: #faf8f5;
   color: #111;
   font-family: serif;
@@ -11,7 +10,13 @@ body {
   font-size: 17px;
 }
 
-/* Header — safe for desktop */
+body {
+  max-width: 680px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+/* Header */
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -21,12 +26,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Logo — same size everywhere */
-.logo {
-  height: 44px;
-  width: auto;
-  display: block;
-}
+.logo { height: 44px; width: auto; }
 
 /* Hamburger */
 .hamburger {
@@ -36,13 +36,12 @@ body {
   font-size: 2em;
   cursor: pointer;
   color: #000;
-  padding: 0.3em;
 }
 
 /* Desktop nav */
 .site-nav {
   display: flex;
-  gap: 2.2rem;
+  gap: 2.3rem;
 }
 .site-nav a {
   color: #000;
@@ -51,59 +50,48 @@ body {
 }
 .site-nav a:hover, .site-nav a.active { font-weight: 600; }
 
-/* MOBILE — full width, working menu */
+/* MOBILE — full width, working menu, no centering */
 @media (max-width: 720px) {
-  body { padding: 0 16px; }  /* full width, minimal side padding */
+  body {
+    max-width: none;           /* removes centering */
+    margin: 12px 0 40px;
+    padding: 0 16px;           /* full width with tiny side padding */
+    font-size: 16.8px;
+  }
 
   .hamburger { display: block; }
 
-  /* Hide desktop nav in header on mobile */
   .site-nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: #faf8f5;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
     padding-top: 140px;
-    gap: 3rem;
-    font-size: 1.35em;  /* big, tap-friendly text */
+    gap: 3.2rem;
+    font-size: 1.4em;
     transform: translateX(100%);
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease;
     z-index: 1000;
   }
 
-  .site-nav.open {
-    transform: translateX(0);
-  }
+  .site-nav.open { transform: translateX(0); }
 
-  /* Backdrop for closing on tap outside */
-  .site-nav.open + body::before {
+  /* tap-outside-to-close overlay */
+  .site-nav.open::before {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: rgba(0,0,0,0.1);
     z-index: -1;
   }
-
-  /* Rest unchanged on mobile */
-  main { margin-top: 1rem; }
 }
 
-/* Rest of styles (unchanged) */
+/* Content styles */
 main { margin-top: 1rem; }
 .breadcrumb { margin: 2rem 0 1.5rem; font-size: 0.95em; color: #555; }
 h1 { margin: 0 0 2rem; font-size: 2.2em; }
-h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; }
 .prose { line-height: 1.3; font-size: 1.15em; margin: 0 0 2.5rem 0; white-space: pre-wrap; }
-.bio { line-height: 1.8; margin-bottom: 3rem; }
-.news-meta { margin: 0 0 2rem; color: #555; font-size: 0.95em; }
-.prose-content { line-height: 1.8; }
-.nav-links { display: flex; justify-content: space-between; font-size: 0.95em; color: #0066cc; margin-top: 2rem; }
 footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: 0.85em; color: #555; text-align: center; }
