@@ -1,18 +1,71 @@
-/* FINAL — maroon links + normal poem size + no overrides */
+/* Voltaire Press — FINAL FINAL: header nav black, all other links maroon */
+
 * { box-sizing: border-box; }
 
 html, body {
   margin: 0; padding: 0;
-  background: #faf8f5; color: #111;
+  background: #faf8f5;
+  color: #111;
   font-family: Georgia, "Times New Roman", serif !important;
-  font-size: 17.5px; line-height: 1.6;
+  font-size: 17.5px;
+  line-height: 1.6;
 }
 
 body { max-width: 680px; margin: 20px auto 60px; padding: 0 20px; }
 
-/* Force maroon links everywhere */
-a, a:visited, .nav-links a { color: #800020 !important; }
-a:hover, .nav-links a:hover { color: #a00020 !important; text-decoration: underline !important; }
+/* Header */
+.header-inner {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 0; border-bottom: 1px solid #eee; margin-bottom: 2rem;
+}
+
+.logo { height: 44px; width: auto; }
+
+.hamburger {
+  display: none;
+  background: none; border: none;
+  font-size: 2em; cursor: pointer; color: #000;
+  z-index: 10001;
+}
+
+/* Desktop nav — BLACK links only */
+.site-nav {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: nowrap;
+}
+.site-nav a {
+  color: #000 !important;               /* ← black */
+  text-decoration: none; font-size: 1.05em;
+}
+.site-nav a:hover, .site-nav a.active { font-weight: 600; }
+
+/* MOBILE */
+@media (max-width: 720px) {
+  body { max-width: none; margin: 12px 0 60px; padding: 0 16px; }
+  .hamburger { display: block; }
+  .site-nav { display: none; }
+  .site-nav {
+    position: fixed; inset: 0;
+    background: #000 !important;
+    color: #fff !important;
+    display: flex !important;
+    flex-direction: column; align-items: center; justify-content: flex-start;
+    padding-top: 130px; gap: 2.8rem; font-size: 1.3em;
+    transform: translateX(100%); transition: transform 0.32s ease;
+    z-index: 10000;
+  }
+  .site-nav.open { transform: translateX(0); }
+  .site-nav a { color: #fff !important; }        /* white in mobile menu */
+  .site-nav.open::after {
+    content: ""; position: fixed; inset: 0;
+    background: rgba(255,255,255,0.12); z-index: -1;
+  }
+}
+
+/* ALL OTHER links (body, Previous/Next, etc.) — maroon */
+a, a:visited, .nav-links a, .breadcrumb a { color: #800020 !important; }
+a:hover, .nav-links a:hover, .breadcrumb a:hover { color: #a00020 !important; text-decoration: underline !important; }
 
 /* Poem text — normal size */
 .prose {
@@ -22,22 +75,11 @@ a:hover, .nav-links a:hover { color: #a00020 !important; text-decoration: underl
   white-space: pre-wrap;
 }
 
-/* Desktop nav */
-.site-nav { display: flex; gap: 1.6rem; flex-wrap: nowrap; }
-.site-nav a { color b: #000; text-decoration: none; font-size: 1.05em; }
-.site-nav a:hover, .site-nav a.active { font-weight: 600; }
-
-/* Mobile menu (unchanged — already perfect) */
-@media (max-width: 720px) {
-  body { max-width: none; margin: 12px 0 60px; padding: 0 16px; }
-  .hamburger { display: block; background:none; border:none; font-size:2em; cursor:pointer; color:#000; z-index:10001; }
-  .site-nav { position:fixed; inset:0; background:#faf8f5; flex-direction:column; align-items:center; justify-content:flex-start; padding-top:130px; gap:2.6rem; font-size:1.28em; transform:translateX(100%); transition:transform .32s ease; z-index:10000; }
-  .site-nav.open { transform:translateX(0); }
-  .site-nav.open::after { content:""; position:fixed; inset:0; background:rgba(0,0,0,0.12); z-index:-1; }
-}
+/* Headings */
+h1 { margin: 0 0 2rem; font-size: 2.2em; font-weight: normal; }
+h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; font-weight: normal; }
 
 /* Rest */
-.header-inner { display:flex; justify-content:space-between; align-items:center; padding:1.2rem 0; border-bottom:1px solid #eee; margin-bottom:2rem; }
-.logo { height:44px; width:auto; }
-h1 { margin:0 0 2rem; font-size:2.2em; font-weight:normal; }
-footer { padding-top:2rem; border-top:1px solid #eee; font-size:.85em; color:#555; text-align:center; }
+main { margin-top: 1rem; }
+.breadcrumb { margin: 2rem 0 1.5rem; font-size: .95em; color: #555; }
+footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: .85em; color: #555; text-align: center; }
