@@ -42,7 +42,8 @@ body {
 /* Desktop nav */
 .site-nav {
   display: flex;
-  gap: 2.3rem;
+  gap: 1.8rem;        /* tighter, perfect for desktop */
+  flex-wrap: nowrap;  /* forces single line */
 }
 .site-nav a {
   color: #000;
