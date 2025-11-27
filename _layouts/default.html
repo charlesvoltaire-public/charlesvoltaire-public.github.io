@@ -10,14 +10,19 @@
 
 <header>
   <div class="header-inner">
-    <!-- Left: Logo -->
+    <!-- Logo -->
     <div class="site-title">
       <a href="/">
         <img src="/assets/logo.svg" alt="Voltaire Press" class="logo">
       </a>
     </div>
 
-    <!-- Right: Navigation -->
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" onclick="document.querySelector('.site-nav').classList.toggle('open')">
+      ☰
+    </button>
+
+    <!-- Navigation -->
     <nav class="site-nav">
       <a href="/authors/" {% if page.url contains '/authors/' %}class="active"{% endif %}>Authors</a>
       <a href="/poetry/" {% if page.url contains '/poetry/' %}class="active"{% endif %}>Poetry</a>
