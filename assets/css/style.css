@@ -1,97 +1,111 @@
-/* Voltaire Press — FINAL: no theme interference, full mobile control */
+/* Voltaire Press — FINAL mobile fix: override theme, full-width, working menu */
 
 html, body {
-  margin: 0;
-  padding: 0;
-  background: #faf8f5;
-  color: #111;
-  font-family: serif;
-  line-height: 1.6;
-  font-size: 17px;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #faf8f5 !important;
+  color: #111 !important;
+  font-family: serif !important;
+  line-height: 1.6 !important;
+  font-size: 18px !important;  /* bigger base for mobile readability */
 }
 
 body {
-  max-width: 680px;
-  margin: 20px auto 40px;
-  padding: 0 20px;
+  max-width: 680px !important;
+  margin: 20px auto 40px !important;
+  padding: 0 20px !important;
 }
 
 /* Header */
 .header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 0;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 2rem;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 1.2rem 0 !important;
+  border-bottom: 1px solid #eee !important;
+  margin-bottom: 2rem !important;
+  position: relative !important;
 }
 
-.logo { height: 44px; width: auto; }
+/* Logo */
+.logo {
+  height: 44px !important;
+  width: auto !important;
+  display: block !important;
+}
 
 /* Hamburger */
 .hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2em;
-  cursor: pointer;
-  color: #000;
+  display: none !important;
+  background: none !important;
+  border: none !important;
+  font-size: 2em !important;
+  cursor: pointer !important;
+  color: #000 !important;
+  padding: 0.3em !important;
 }
 
 /* Desktop nav */
 .site-nav {
-  display: flex;
-  gap: 2.3rem;
+  display: flex !important;
+  gap: 2.2rem !important;
 }
 .site-nav a {
-  color: #000;
-  text-decoration: none;
-  font-size: 1.1em;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-size: 1.1em !important;
 }
-.site-nav a:hover, .site-nav a.active { font-weight: 600; }
+.site-nav a:hover, .site-nav a.active { font-weight: 600 !important; }
 
-/* MOBILE — full width, working menu, no centering */
+/* MOBILE — full width, override theme centering */
 @media (max-width: 720px) {
-  body {
-    max-width: none;           /* removes centering */
-    margin: 12px 0 40px;
-    padding: 0 16px;           /* full width with tiny side padding */
-    font-size: 16.8px;
+  html, body {
+    max-width: none !important;
+    margin: 12px 0 40px !important;
+    padding: 0 16px !important;  /* full width, minimal sides */
+    font-size: 17px !important;  /* comfortable, not tiny */
   }
 
-  .hamburger { display: block; }
+  .hamburger { display: block !important; }
 
+  /* Hide desktop nav, make full-screen menu */
   .site-nav {
-    position: fixed;
-    inset: 0;
-    background: #faf8f5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 140px;
-    gap: 3.2rem;
-    font-size: 1.4em;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
+    position: fixed !important;
+    inset: 0 !important;
+    background: #faf8f5 !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding-top: 140px !important;
+    gap: 3rem !important;
+    font-size: 1.4em !important;  /* huge menu text */
+    transform: translateX(100%) !important;
+    transition: transform 0.3s ease-out !important;
+    z-index: 10000 !important;  /* above everything */
   }
 
-  .site-nav.open { transform: translateX(0); }
+  .site-nav.open {
+    transform: translateX(0) !important;
+  }
 
-  /* tap-outside-to-close overlay */
+  /* Backdrop — tap to close */
   .site-nav.open::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.1);
-    z-index: -1;
+    content: '' !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0,0,0,0.1) !important;
+    z-index: -1 !important;
   }
 }
 
-/* Content styles */
+/* Rest unchanged */
 main { margin-top: 1rem; }
 .breadcrumb { margin: 2rem 0 1.5rem; font-size: 0.95em; color: #555; }
 h1 { margin: 0 0 2rem; font-size: 2.2em; }
+h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; }
 .prose { line-height: 1.3; font-size: 1.15em; margin: 0 0 2.5rem 0; white-space: pre-wrap; }
+.bio { line-height: 1.8; margin-bottom: 3rem; }
+.news-meta { margin: 0 0 2rem; color: #555; font-size: 0.95em; }
+.prose-content { line-height: 1.8; }
+.nav-links { display: flex; justify-content: space-between; font-size: 0.95em; color: #0066cc; margin-top: 2rem; }
 footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: 0.85em; color: #555; text-align: center; }
