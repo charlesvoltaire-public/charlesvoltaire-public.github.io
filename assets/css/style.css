@@ -1,49 +1,88 @@
-/* Voltaire Press — TRUE FINAL: header hover perfect, maroon links restored, mobile menu fully working */
+/* Voltaire Press — FINAL OVERRIDE: maroon links, normal poem size, full mobile width, working menu */
 
 * { box-sizing: border-box; }
 
 html, body {
-  margin: 0; padding: 0;
-  background: #faf8f5;
-  color: #111;
+  margin: 0 !important; padding: 0 !important;
+  background: #faf8f5 !important;
+  color: #111 !important;
   font-family: Georgia, "Times New Roman", serif !important;
-  font-size: 17.5px;
-  line-height: 1.6;
+  font-size: 17.5px !important;
+  line-height: 1.6 !important;
 }
 
-body { max-width: 680px; margin: 20px auto 60px; padding: 0 20px; }
+body { max-width: 680px !important; margin: 20px auto 60px !important; padding: 0 20px !important; }
 
 /* Header */
 .header-inner {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.2rem 0; border-bottom: 1px solid #eee; margin-bottom: 2rem;
-  position: relative;
+  display: flex !important; justify-content: space-between !important; align-items: center !important;
+  padding: 1.2rem 0 !important; border-bottom: 1px solid #eee !important; margin-bottom: 2rem !important;
+  position: relative !important;
 }
 
-.logo { height: 44px; width: auto; }
+.logo { height: 44px !important; width: auto !important; }
 
-/* Hamburger — only visible on mobile */
+/* Hamburger */
 .hamburger {
-  display: none;
-  background: none; border: none;
-  font-size: 2em; cursor: pointer; color: #000;
-  z-index: 10001;
-  position: relative;
+  display: none !important;
+  background: none !important; border: none !important;
+  font-size: 2em !important; cursor: pointer !important; color: #000 !important;
+  z-index: 10001 !important;
 }
 
-/* Desktop nav — black → lighter black on hover/active, no jump */
+/* Desktop nav — black */
 .site-nav {
-  display: flex;
-  gap: 1.6rem;
-  flex-wrap: nowrap;
+  display: flex !important;
+  gap: 1.6rem !important;
+  flex-wrap: nowrap !important;
 }
 .site-nav a {
   color: #000 !important;
   text-decoration: none !important;
-  font-size: 1.05em;
+  font-size: 1.05em !important;
   font-weight: normal !important;
-  transition: color 0.2s ease;
 }
-.site-nav a:hover,
-.site-nav a.active {
-  color
+.site-nav a:hover, .site-nav a.active { color: #444 !important; }
+
+/* MOBILE — full width, override theme */
+@media (max-width: 720px) {
+  body {
+    max-width: none !important;
+    margin: 12px 0 60px !important;
+    padding: 0 16px !important;
+  }
+  .hamburger { display: block !important; }
+  .site-nav {
+    position: fixed !important; inset: 0 !important;
+    background: #000 !important;
+    color: #fff !important;
+    display: flex !important;
+    flex-direction: column !important; align-items: center !important; justify-content: flex-start !important;
+    padding-top: 130px !important; gap: 2.8rem !important; font-size: 1.3em !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.32s ease !important;
+    z-index: 10000 !important;
+  }
+  .site-nav.open { transform: translateX(0) !important; }
+  .site-nav a { color: #fff !important; }
+  .site-nav.open::after { content: ""; position: fixed !important; inset: 0 !important; background: rgba(255,255,255,0.12) !important; z-index: -1 !important; }
+}
+
+/* Maroon links — everywhere except header nav */
+a, a:visited, .nav-links a, .breadcrumb a { color: #800020 !important; }
+a:hover, .nav-links a:hover, .breadcrumb a:hover { color: #a00020 !important; text-decoration: underline !important; }
+
+/* Poem — normal size */
+.prose {
+  line-height: 1.34 !important;
+  font-size: 1.02em !important;
+  margin: 0 0 2.6rem 0 !important;
+  white-space: pre-wrap;
+}
+
+/* Headings & rest */
+h1 { margin: 0 0 2rem; font-size: 2.2em; font-weight: normal; }
+h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; font-weight: normal; }
+main { margin-top: 1rem; }
+.breadcrumb { margin: 2rem 0 1.5rem; font-size: .95em; color: #555; }
+footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: .85em; color: #555; text-align: center; }
