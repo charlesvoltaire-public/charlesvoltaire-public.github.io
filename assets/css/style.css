@@ -1,4 +1,5 @@
-/* Voltaire Press — FINAL, 100% working mobile + desktop */
+/* Voltaire Press — FINAL: poem font everywhere + slightly smaller poem text */
+
 * { box-sizing: border-box; }
 
 html, body {
@@ -6,9 +7,10 @@ html, body {
   padding: 0;
   background: #faf8f5;
   color: #111;
-  font-family: serif;
-  line-height: 1.6;
+  /* Use the exact same poem font everywhere */
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 17.5px;
+  line-height: 1.6;
 }
 
 body {
@@ -39,11 +41,11 @@ body {
   z-index: 10001;
 }
 
-/* Desktop nav */
+/* Desktop nav — same poem font, perfect spacing */
 .site-nav {
   display: flex;
-  gap: 1.8rem;        /* tighter, perfect for desktop */
-  flex-wrap: nowrap;  /* forces single line */
+  gap: 1.8rem;
+  flex-wrap: nowrap;
 }
 .site-nav a {
   color: #000;
@@ -52,16 +54,14 @@ body {
 }
 .site-nav a:hover, .site-nav a.active { font-weight: 600; }
 
-/* MOBILE — full width + working menu */
+/* MOBILE */
 @media (max-width: 720px) {
   body {
     max-width: none;
     margin: 12px 0 60px;
     padding: 0 16px;
   }
-
   .hamburger { display: block; }
-
   .site-nav {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -69,16 +69,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 140px;
-    gap: 3.5rem;
-    font-size: 1.45em;
+    padding-top: 130px;
+    gap: 2.4rem;
+    font-size: 1.25em;
+    line-height: 1.4;
     transform: translateX(100%);
     transition: transform 0.32s ease;
     z-index: 10000;
   }
-
   .site-nav.open { transform: translateX(0); }
-
   .site-nav.open::after {
     content: "";
     position: fixed;
@@ -88,9 +87,18 @@ body {
   }
 }
 
-/* Content */
-main { margin-top: 1rem; }
-.breadcrumb { margin: 2rem 0 1.5rem; font-size: .95em; color: #555; }
-h1 { margin: 0 0 2rem; font-size: 2.2em; }
-.prose { line-height: 1.3; font-size: 1.15em; margin: 0 0 2.5rem 0; white-space: pre-wrap; }
-footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: .85em; color: #555; text-align: center; }
+/* Poem & prose — slightly smaller, perfect */
+.prose {
+  line-height: 1.3;
+  font-size: 1.08em;        /* reduced from 1.15em → now perfect */
+  margin: 0 0 2.5rem 0;
+  white-space: pre-wrap;
+}
+
+/* Headings also in the same serif */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  letter-spacing: -0.01em;
+}
+h1 { margin: 0 0 2rem;
