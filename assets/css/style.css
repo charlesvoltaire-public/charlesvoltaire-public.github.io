@@ -1,6 +1,8 @@
+/* Voltaire Press — fully mobile-responsive + hamburger menu */
+
 body {
   max-width: 680px;
-  margin: 20px auto 40px;  /* tighter top margin for less space above header */
+  margin: 20px auto 40px;
   padding: 0 20px;
   background: #faf8f5;
   color: #111;
@@ -8,42 +10,73 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;  /* tight top/bottom padding */
+  padding: 1rem 0;
   border-bottom: 1px solid #eee;
-  margin-bottom: 2rem;  /* space below header to content */
+  margin-bottom: 2rem;
+  position: relative;
 }
 
-/* Logo — crisp, no background, no pixelation */
+/* Logo — responsive */
 .logo {
-  height: 44px;  /* adjust if needed */
+  height: 44px;           /* desktop */
   width: auto;
-  display: block;
-  background: transparent !important;  /* forces no white box */
-  image-rendering: -webkit-optimize-contrast;  /* crisp on all devices */
 }
 
-/* Navigation — right-aligned, even spacing */
+/* Hamburger button (visible only on mobile) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+/* Desktop nav */
 .site-nav {
   display: flex;
-  justify-content: flex-end;  /* forces right alignment */
-  gap: 2.2rem;  /* even space between links */
+  gap: 2.2rem;
 }
 .site-nav a {
   color: #000;
   text-decoration: none;
   font-size: 1.1em;
 }
-.site-nav a:hover,
-.site-nav a.active {
-  font-weight: 600;
+.site-nav a:hover, .site-nav a.active { font-weight: 600; }
+
+/* ——— MOBILE ——— */
+@media (max-width: 720px) {
+  .logo { height: 38px; }                     /* slightly smaller on phone */
+  body { padding: 0 16px; margin: 12px auto 40px; }
+
+  .hamburger { display: block; }
+
+  .site-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #faf8f5;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+    gap: 2.4rem;
+    font-size: 1.4em;
+    transform: translateX(100%);
+    transition: transform 0.25s ease-out;
+    z-index: 999;
+  }
+  .site-nav.open { transform: translateX(0); }
+
+  .site-nav a { color: #000; }
 }
 
-main { margin-top: 1rem; }  /* less space before content */
-
+/* Rest of your existing styles (unchanged) */
+main { margin-top: 1rem; }
 .breadcrumb { margin: 2rem 0 1.5rem; font-size: 0.95em; color: #555; }
 h1 { margin: 0 0 2rem; font-size: 2.2em; }
 h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; }
