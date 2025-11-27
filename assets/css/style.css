@@ -1,8 +1,6 @@
-/* Voltaire Press — final: no "Home" link, perfect crisp SVG logo */
-
 body {
   max-width: 680px;
-  margin: 40px auto;
+  margin: 20px auto 40px;  /* tighter top margin for less space above header */
   padding: 0 20px;
   background: #faf8f5;
   color: #111;
@@ -14,35 +12,37 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 0;
+  padding: 1rem 0;  /* tight top/bottom padding */
   border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;  /* space below header to content */
 }
 
-/* Logo — crisp SVG, no white background, no pixelation */
+/* Logo — crisp, no background, no pixelation */
 .logo {
-  height: 48px;           /* tweak this number to your taste */
+  height: 44px;  /* adjust if needed */
   width: auto;
   display: block;
-  background: transparent;   /* removes any white box */
+  background: transparent !important;  /* forces no white box */
+  image-rendering: -webkit-optimize-contrast;  /* crisp on all devices */
 }
 
-/* Remove "Home" from navigation */
-.site-nav a:nth-child(1) { display: none; }   /* hides the first link ("Home") */
-
-/* Perfect spacing for the remaining 5 links */
+/* Navigation — right-aligned, even spacing */
+.site-nav {
+  display: flex;
+  justify-content: flex-end;  /* forces right alignment */
+  gap: 2.2rem;  /* even space between links */
+}
 .site-nav a {
-  margin-left: 2.6rem;
   color: #000;
   text-decoration: none;
   font-size: 1.1em;
 }
-.site-nav a:first-child { margin-left: 0; }           /* not used anymore */
 .site-nav a:hover,
 .site-nav a.active {
   font-weight: 600;
 }
 
-main { margin-top: 2rem; }
+main { margin-top: 1rem; }  /* less space before content */
 
 .breadcrumb { margin: 2rem 0 1.5rem; font-size: 0.95em; color: #555; }
 h1 { margin: 0 0 2rem; font-size: 2.2em; }
