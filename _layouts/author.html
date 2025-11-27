@@ -1,24 +1,17 @@
 ---
 layout: default
 ---
-
-<nav style="margin:2rem 0 1.5rem; font-size:0.95em; color:#666;">
-  <a href="/">Home</a> › <a href="/authors/">Authors</a> › {{ page.title }}
+<nav class="breadcrumb">
+  <a href="/">Home</a> → <a href="/authors/">Authors</a> → {{ page.title }}
 </nav>
 
-<h1 style="margin:0 0 2rem; font-size:2.2em;">{{ page.title }}</h1>
+<h1>{{ page.title }}</h1>
 
-<div style="line-height:1.8; margin-bottom:3rem;">
-  {{ content }}
-</div>
+{% if page.bio %}
+<div class="bio">{{ page.bio }}</div>
+{% endif %}
 
-<h2 style="margin:2.5rem 0 1rem; font-size:1.4em; border-bottom:1px solid #eee; padding-bottom:0.3rem;">
-  Works
-</h2>
-
-{% assign author_works = site.pages | where: 'author', page.title | sort: 'date' | reverse %}
-{% for work in author_works %}
-  {% if work.layout == "poem" or work.layout == "fiction" or work.layout == "news" %}
-  - <a href="{{ work.url }}">{{ work.title }}</a>
-  {% endif %}
+{% assign author_posts = site.pages | where:"author", page.title %}
+{% for post in author_posts %}
+  <p><a href="{{ post.url }}">{{ post.title }}</a> — {{ post.categories | join:", " }}</p>
 {% endfor %}
