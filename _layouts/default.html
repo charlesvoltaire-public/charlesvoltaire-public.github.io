@@ -5,54 +5,32 @@
   <title>{{ page.title }} – Voltaire Press</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/minimal-css/2.4.0/minimal.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-    body { max-width: 680px; margin: 40px auto; padding: 0 20px; line-height: 1.6; font-family: serif; }
-    header h1 { margin: 0 0 1.5rem; font-size: 2.4em; }
-    header h1 a { color: black; text-decoration: none; }
-    header nav { margin: 2rem 0; padding-bottom: 0.8rem; border-bottom: 1px solid #eee; font-size: 1.1em; }
-    header nav a { color: black; text-decoration: none; margin-right: 2rem; position: relative; }
-    header nav a:hover, header nav a.active { color: #333; }
-    header nav a:hover:after, header nav a.active:after { content: ""; position: absolute; bottom: -4px; left: 0; width: 100%; height: 1px; background: #333; }
-    .dropdown { position: relative; display: inline-block; }
-    .dropdown-content { display: none; position: absolute; background: white; min-width: 160px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 0.8rem 0; margin-top: 0.5rem; border: 1px solid #eee; font-size: 0.95em; z-index: 1; }
-    .dropdown:hover .dropdown-content { display: block; }
-    .dropdown-content a { display: block; padding: 0.4rem 1.2rem; margin: 0; }
-    footer { margin-top: 8rem; padding-top: 2rem; border-top 1px solid #eee; font-size: 0.85em; color: #666; text-align: center; }
-  </style>
 </head>
 <body>
-<header>
-  <div style="display:flex; justify-content:space-between; align-items:center; padding:2.5rem 0;">
-    <!-- Left: Title / future logo -->
-    <div>
-      <h1 style="margin:0; font-size:2.2em;">
-        <a href="/" style="color:#000; text-decoration:none;">Voltaire Press</a>
-      </h1>
-    </div>
 
-    <!-- Right: Flat navigation -->
-    <nav style="font-size:1.1em;">
-      <a href="/" {% if page.url == "/" %}style="font-weight:600;"{% endif %}>Home</a>
-      <span style="margin:0 1.4rem; color:#ccc;">·</span>
-      <a href="/authors/" {% if page.url contains '/authors/' %}style="font-weight:600;"{% endif %}>Authors</a>
-      <span style="margin:0 1.4rem; color:#ccc;">·</span>
-      <a href="/poetry/" {% if page.url contains '/poetry/' %}style="font-weight:600;"{% endif %}>Poetry</a>
-      <span style="margin:0 1.4rem; color:#ccc;">·</span>
-      <a href="/long-form/" {% if page.url contains '/long-form/' %}style="font-weight:600;"{% endif %}>Long Form</a>
-      <span style="margin:0 1.4rem; color:#ccc;">·</span>
-      <a href="/short-story/" {% if page.url contains '/short-story/' %}style="font-weight:600;"{% endif %}>Short Story</a>
-      <span style="margin:0 1.4rem; color:#ccc;">·</span>
-      <a href="/news/" {% if page.url contains '/news/' %}style="font-weight:600;"{% endif %}>Metaphysical News</a>
+<header>
+  <div class="header-inner">
+    <div class="site-title">
+      <h1><a href="/">Voltaire Press</a></h1>
+    </div>
+    <nav class="site-nav">
+      <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+      <a href="/authors/" {% if page.url contains '/authors/' %}class="active"{% endif %}>Authors</a>
+      <a href="/poetry/" {% if page.url contains '/poetry/' %}class="active"{% endif %}>Poetry</a>
+      <a href="/long-form/" {% if page.url contains '/long-form/' %}class="active"{% endif %}>Long Form</a>
+      <a href="/short-story/" {% if page.url contains '/short-story/' %}class="active"{% endif %}>Short Story</a>
+      <a href="/news/" {% if page.url contains '/news/' %}class="active"{% endif %}>Metaphysical News</a>
     </nav>
   </div>
 </header>
 
-  <main>
-    {{ content }}
-  </main>
+<main>
+  {{ content }}
+</main>
 
-  <footer>
-    Last updated {{ site.time | date: "%B %d, %Y at %H:%M UTC" }}
-  </footer>
+<footer>
+  Last updated {{ site.time | date: "%B %d, %Y at %H:%M UTC" }}
+</footer>
+
 </body>
 </html>
