@@ -98,3 +98,21 @@ h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; pad
 main { margin-top: 1rem; }
 .breadcrumb { margin: 2rem 0 1.5rem; font-size: .95em; color: #555; }
 footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: .85em; color: #555; text-align: center; }
+
+/* Breadcrumbs: links = maroon, current page = black & unstyled */
+.breadcrumb a {                      /* Home, Poetry, Authors, etc. */
+  color: #800020 !important;
+  text-decoration: none !important;
+}
+.breadcrumb a:hover {
+  color: #a00020 !important;
+  text-decoration: underline !important;
+}
+
+/* Current page title in breadcrumb — always black, never a link style */
+.breadcrumb { color: #000 !important; }           /* the plain text part */
+.breadcrumb *:not(a) {                           /* the current page title */
+  color: #000 !important;
+  font-weight: normal !important;
+  pointer-events: none;                          /* not clickable */
+}
