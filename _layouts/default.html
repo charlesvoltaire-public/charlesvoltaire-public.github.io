@@ -16,16 +16,16 @@
       </a>
     </div>
 
-    <button class="hamburger" aria-label="Menu" onclick="document.body.classList.toggle('nav-open'); document.querySelector('.site-nav').classList.toggle('open')">
-      Menu
+    <button class="hamburger" onclick="document.querySelector('.site-nav').classList.toggle('open')">
+      ☰
     </button>
 
     <nav class="site-nav">
       <a href="/authors/" {% if page.url contains '/authors/' %}class="active"{% endif %}>Authors</a>
       <a href="/poetry/" {% if page.url contains '/poetry/' %}class="active"{% endif %}>Poetry</a>
-      <a href="/long-form/" {% if page.url contains '/long-form/' %}class="active"{% endif %}">Long Form</a>
-      <a href="/short-story/" {% if page.url contains '/short-story/' %}class="active"{% endif %}">Short Story</a>
-      <a href="/news/" {% if page.url contains '/news/' %}class="active"{% endif %}">Metaphysical News</a>
+      <a href="/long-form/" {% if page.url contains '/long-form/' %}class="active"{% endif %}>Long Form</a>
+      <a href="/short-story/" {% if page.url contains '/short-story/' %}class="active"{% endif %}>Short Story</a>
+      <a href="/news/" {% if page.url contains '/news/' %}class="active"{% endif %}>Metaphysical News</a>
     </nav>
   </div>
 </header>
