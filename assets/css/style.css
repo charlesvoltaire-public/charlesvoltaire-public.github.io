@@ -1,4 +1,4 @@
-/* Voltaire Press — FINAL FOREVER: desktop nav + breadcrumbs = always black, no underline, no bold, no change ever */
+/* Voltaire Press — TRUE FINAL FOREVER: header + breadcrumbs always black, body links maroon */
 
 * { box-sizing: border-box; }
 
@@ -30,24 +30,16 @@ body { max-width: 680px !important; margin: 20px auto 60px !important; padding: 
   z-index: 10001 !important;
 }
 
-/* DESKTOP NAV & BREADCRUMBS — always pure black, no change ever */
+/* DESKTOP HEADER NAV & BREADCRUMBS — always pure black, no change ever */
 .site-nav a,
 .breadcrumb a,
-.site-nav a:hover,
-.site-nav a:active,
-.site-nav a:focus,
-.site-nav a:visited,
-.site-nav a.active,
-.breadcrumb a:hover,
-.breadcrumb a:active,
-.breadcrumb a:focus,
-.breadcrumb a:visited {
+.site-nav a:hover, .site-nav a:active, .site-nav a:focus, .site-nav a:visited, .site-nav a.active,
+.breadcrumb a:hover, .breadcrumb a:active, .breadcrumb a:focus, .breadcrumb a:visited {
   color: #000 !important;
   text-decoration: none !important;
   font-weight: normal !important;
 }
 
-/* Desktop nav layout */
 .site-nav {
   display: flex !important;
   gap: 1.6rem !important;
@@ -57,4 +49,52 @@ body { max-width: 680px !important; margin: 20px auto 60px !important; padding: 
 
 /* MOBILE — unchanged, perfect */
 @media (max-width: 720px) {
-  body
+  body { max-width: none !important; margin: 12px 0 60px !important; padding: 0 16px !important; }
+  .hamburger { display: block !important; }
+  .site-nav {
+    position: fixed !important; inset: 0 !important;
+    background: #000 !important; color: #fff !important;
+    display: flex !important; flex-direction: column !important;
+    align-items: center !important; justify-content: flex-start !important;
+    padding-top: 130px !important; gap: 2.8rem !important; font-size: 1.3em !important;
+    transform: translateX(100%) !important; transition: transform 0.32s ease !important;
+    z-index: 10000 !important;
+  }
+  .site-nav.open { transform: translateX(0) !important; }
+  .site-nav a,
+  .site-nav a:hover,
+  .site-nav a:active,
+  .site-nav a:visited,
+  .site-nav a.active { color: #fff !important; text-decoration: none !important; }
+  .site-nav.open::after { content: ""; position: fixed !important; inset: 0 !important; background: rgba(255,255,255,0.12) !important; z-index: -1 !important; }
+}
+
+/* BODY LINKS ONLY — maroon (Previous/Next, author links, etc.) */
+body a,
+.nav-links a,
+.prose a,
+.bio a {
+  color: #800020 !important;
+}
+body a:hover,
+.nav-links a:hover,
+.prose a:hover,
+.bio a:hover {
+  color: #a00020 !important;
+  text-decoration: underline !important;
+}
+
+/* Poem & bio */
+.prose, .bio {
+  line-height: 1.34 !important;
+  font-size: 1.02em !important;
+  margin: 0 0 2.6rem 0 !important;
+  white-space: pre-wrap;
+}
+
+/* Rest */
+h1 { margin: 0 0 2rem; font-size: 2.2em; font-weight: normal; }
+h2 { margin: 2.5rem 0 1rem; font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; font-weight: normal; }
+main { margin-top: 1rem; }
+.breadcrumb { margin: 2rem 0 1.5rem; font-size: .95em; color: #555; }
+footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: .85em; color: #555; text-align: center; }
