@@ -22,31 +22,26 @@
 </head>
 <body>
 <header>
-  <div style="display:flex; justify-content:space-between; align-items:center; padding:2rem 0;">
-    <!-- Left: Logo -->
+  <div style="display:flex; justify-content:space-between; align-items:center; padding:2.5rem 0;">
+    <!-- Left: Title / future logo -->
     <div>
       <h1 style="margin:0; font-size:2.2em;">
         <a href="/" style="color:#000; text-decoration:none;">Voltaire Press</a>
       </h1>
     </div>
 
-    <!-- Right: Navigation -->
+    <!-- Right: Flat navigation -->
     <nav style="font-size:1.1em;">
       <a href="/" {% if page.url == "/" %}style="font-weight:600;"{% endif %}>Home</a>
-      <span style="margin:0 1.2rem; color:#ccc;">·</span>
+      <span style="margin:0 1.4rem; color:#ccc;">·</span>
       <a href="/authors/" {% if page.url contains '/authors/' %}style="font-weight:600;"{% endif %}>Authors</a>
-      <span style="margin:0 1.2rem; color:#ccc;">·</span>
-
-      <div class="dropdown" style="display:inline-block;">
-        <a href="#" {% if page.url contains '/poetry/' or page.url contains '/long-form/' or page.url contains '/short-story/' %}style="font-weight:600;"{% endif %}>Writing ▼</a>
-        <div class="dropdown-content">
-          <a href="/long-form/">Long Form</a>
-          <a href="/short-story/">Short Story</a>
-          <a href="/poetry/">Poetry</a>
-        </div>
-      </div>
-
-      <span style="margin:0 1.2rem; color:#ccc;">·</span>
+      <span style="margin:0 1.4rem; color:#ccc;">·</span>
+      <a href="/poetry/" {% if page.url contains '/poetry/' %}style="font-weight:600;"{% endif %}>Poetry</a>
+      <span style="margin:0 1.4rem; color:#ccc;">·</span>
+      <a href="/long-form/" {% if page.url contains '/long-form/' %}style="font-weight:600;"{% endif %}>Long Form</a>
+      <span style="margin:0 1.4rem; color:#ccc;">·</span>
+      <a href="/short-story/" {% if page.url contains '/short-story/' %}style="font-weight:600;"{% endif %}>Short Story</a>
+      <span style="margin:0 1.4rem; color:#ccc;">·</span>
       <a href="/news/" {% if page.url contains '/news/' %}style="font-weight:600;"{% endif %}>Metaphysical News</a>
     </nav>
   </div>
