@@ -2,15 +2,11 @@
 layout: default
 ---
 
-<nav style="margin:2rem 0 1.5rem; font-size:0.95em; color:#666;">
-  <a href="/">Home</a> › <a href="/news/">Metaphysical News</a> › {{ page.title }}
+<nav class="breadcrumb">
+  <a href="/">Home</a> → <a href="/news/">Metaphysical News</a> → {{ page.title }}
 </nav>
 
-<h1 style="margin:0 0 0.5rem; font-size:2.2em;">{{ page.title }}</h1>
-<p style="margin:0 0 2rem; color:#666;">
-  {{ page.date | date:"%B %d, %Y" }} — {{ page.author }}
-</p>
+<h1>{{ page.title }}</h1>
+<p class="news-meta">{{ page.date | date:"%B %d, %Y" }} — {{ page.author }}</p>
 
-<div style="line-height:1.8;">
-  {{ content }}
-</div>
+<div class="prose-content">{{ content }}</div>
