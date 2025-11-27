@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} – Voltaire Press</title>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- NO minimal-css theme anymore -->
 </head>
 <body>
 
 <header>
   <div class="header-inner">
+    <!-- Logo (left) -->
     <div class="site-title">
       <a href="/">
         <img src="/assets/logo.svg" alt="Voltaire Press" class="logo">
       </a>
     </div>
 
-    <button class="hamburger" onclick="document.querySelector('.site-nav').classList.toggle('open')">
-      ☰
-    </button>
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" aria-label="Menu">☰</button>
 
+    <!-- Navigation -->
     <nav class="site-nav">
       <a href="/authors/" {% if page.url contains '/authors/' %}class="active"{% endif %}>Authors</a>
       <a href="/poetry/" {% if page.url contains '/poetry/' %}class="active"{% endif %}>Poetry</a>
@@ -36,6 +39,25 @@
 <footer>
   Last updated {{ site.time | date: "%B %d, %Y at %H:%M UTC" }}
 </footer>
+
+<!-- Tiny working JavaScript for the mobile menu -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.site-nav');
+
+  hamburger.addEventListener('click', function() {
+    nav.classList.toggle('open');
+  });
+
+  // Close menu when tapping outside
+  document.addEventListener('click', function(e) {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
