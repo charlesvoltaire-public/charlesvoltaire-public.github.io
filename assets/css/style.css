@@ -1,3 +1,5 @@
+/* Voltaire Press — final: no "Home" link, perfect crisp SVG logo */
+
 body {
   max-width: 680px;
   margin: 40px auto;
@@ -16,19 +18,25 @@ body {
   border-bottom: 1px solid #eee;
 }
 
+/* Logo — crisp SVG, no white background, no pixelation */
 .logo {
-  height: 46px;           /* change this number if you want it bigger/smaller */
+  height: 48px;           /* tweak this number to your taste */
   width: auto;
   display: block;
+  background: transparent;   /* removes any white box */
 }
 
+/* Remove "Home" from navigation */
+.site-nav a:nth-child(1) { display: none; }   /* hides the first link ("Home") */
+
+/* Perfect spacing for the remaining 5 links */
 .site-nav a {
-  margin-left: 2.4rem;
+  margin-left: 2.6rem;
   color: #000;
   text-decoration: none;
   font-size: 1.1em;
 }
-.site-nav a:first-child { margin-left: 0; }
+.site-nav a:first-child { margin-left: 0; }           /* not used anymore */
 .site-nav a:hover,
 .site-nav a.active {
   font-weight: 600;
