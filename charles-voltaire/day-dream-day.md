@@ -1,7 +1,7 @@
 ---
 layout: poem
 title: Day-dream-Day
-date: 2025-11-24
+date: 2016-05-01
 author: Charles Voltaire
 categories: [poetry]
 permalink: /day-dream-day
