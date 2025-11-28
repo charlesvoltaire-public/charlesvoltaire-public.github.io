@@ -1,10 +1,10 @@
 ---
 layout: poem
-title: Entre chien et loup
+title: La petite mort
 date: 2020-01-02
 author: Charles Voltaire
 categories: [poetry]
-permalink: /entre-chien-et-loup
+permalink: /la-petite-mort
 ---
 
 There was no end
