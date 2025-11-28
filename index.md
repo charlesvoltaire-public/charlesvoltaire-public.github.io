@@ -2,7 +2,11 @@
 title: Home
 ---
 
-"Those who can make you believe absurdities can make you commit atrocities" - Voltaire
+<center>
+  "Those who can make you believe absurdities can make you commit atrocities" 
+  - Voltaire
+</center>
+
 
 ## All posts
 
