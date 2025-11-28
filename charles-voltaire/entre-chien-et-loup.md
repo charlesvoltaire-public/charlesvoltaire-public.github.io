@@ -1,7 +1,7 @@
 ---
 layout: poem
 title: Entre chien et loup
-date: 2016-05-01
+date: 2020-01-01
 author: Charles Voltaire
 categories: [poetry]
 permalink: /entre-chien-et-loup
