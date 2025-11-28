@@ -116,3 +116,21 @@ footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: .85em; color:
   font-weight: normal !important;
   pointer-events: none;                          /* not clickable */
 }
+
+/* FINAL FIX: breadcrumb links stay maroon even after visiting — desktop + mobile */
+.breadcrumb a,
+.breadcrumb a:visited,
+.breadcrumb a:hover,
+.breadcrumb a:active {
+  color: #800020 !important;
+  text-decoration: none !important;
+}
+.breadcrumb a:hover {
+  color: #a00020 !important;
+  text-decoration: underline !important;
+}
+
+/* Current page title in breadcrumb stays black */
+.breadcrumb *:not(a) {
+  color: #000 !important;
+}
