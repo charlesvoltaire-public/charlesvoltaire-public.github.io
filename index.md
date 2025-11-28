@@ -3,7 +3,7 @@ title: Home
 ---
 
 <center>
-  "Those who can make you believe absurdities can make you commit atrocities" 
+  "Those who can make you believe absurdities can make you commit atrocities" <br>
   - Voltaire
 </center>
 
