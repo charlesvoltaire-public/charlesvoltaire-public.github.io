@@ -1,13 +1,12 @@
 ---
 layout: default
 title: Long Form
+permalink: /long-form/
 ---
 <nav class="breadcrumb">
   <a href="/">Home</a> → Long Form
 </nav>
-
 <h1>Long Form</h1>
-
 <ul>
   {% assign pieces = site.pages | where:"categories","long-form" | sort:"date" | reverse %}
   {% for piece in pieces %}
