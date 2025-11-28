@@ -160,3 +160,20 @@ main {
 footer {
   padding: 3rem 0 2rem !important;
 }
+
+/* TRUE POETRY MODE — exact spacing, no unwanted paragraph gaps */
+.prose {
+  white-space: pre-wrap !important;     /* respects spaces + single line breaks */
+  margin: 0 0 2.6rem 0 !important;
+}
+
+/* Kill all paragraph margins inside poems — this is the key */
+.prose p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Optional: add subtle stanza spacing only on blank lines */
+.prose p + p {
+  margin-top: 1.2em !important;         /* space only between stanzas */
+}
