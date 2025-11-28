@@ -134,3 +134,23 @@ footer { padding-top: 2rem; border-top: 1px solid #eee; font-size: .85em; color:
 .breadcrumb *:not(a) {
   color: #000 !important;
 }
+
+/* Make every page at least 100vh tall — clean, minimal, works everywhere */
+html, body {
+  min-height: 100vh !important;
+}
+
+/* Ensure the layout stretches to fill the height */
+body {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+main {
+  flex: 1 !important;        /* this pushes the footer to the bottom */
+}
+
+/* Optional: give footer a little breathing room when content is short */
+footer {
+  padding: 3rem 0 2rem !important;
+}
