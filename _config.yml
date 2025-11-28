@@ -10,6 +10,3 @@ defaults:
     values:
       layout: default
 
-# favicon
-
-icon: /favicon.png
