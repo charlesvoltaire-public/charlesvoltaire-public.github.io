@@ -7,8 +7,6 @@ categories: [poetry]
 permalink: /the-dance-of-the-ghosts
 ---
 
-The Dance of the Ghosts
-
 The dance of the ghosts In the fading twilight.  
 A bob of the head,  
 A whimper and cower,  
@@ -59,7 +57,9 @@ Is her beautiful dance,
 The inscription which writes,  
 "Give me one ghost in place of another."
 
-* Voltaire
+-- Voltaire
+
+---
 
 This work was originally released under a Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
