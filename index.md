@@ -2,7 +2,7 @@
 title: Home
 ---
 
-Writing, Poetry, and Metaphysical News
+"Those who can make you believe absurdities can make you commit atrocities" - Voltaire
 
 ## All posts
 
@@ -18,4 +18,3 @@ Writing, Poetry, and Metaphysical News
 <em>No posts yet — the first one is coming soon.</em>
 {% endif %}
 
-[Poetry →](/poetry/)
