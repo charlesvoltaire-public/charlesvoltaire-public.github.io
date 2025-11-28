@@ -1,14 +1,12 @@
 ---
 layout: default
 title: Charles Voltaire
-permalink: /charles-voltaire/           # ← keeps your SEO-friendly root URL
+permalink: /charles-voltaire/
 ---
 <nav class="breadcrumb">
   <a href="/">Home</a> → <a href="/authors/">Authors</a> → Charles Voltaire
 </nav>
-
 <h1>All Writing</h1>
-
 <ul>
   {% assign posts = site.pages | where:"author","Charles Voltaire" | sort:"date" | reverse %}
   {% for post in posts %}
