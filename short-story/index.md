@@ -1,13 +1,12 @@
 ---
 layout: default
 title: Short Story
+permalink: /short-story/
 ---
 <nav class="breadcrumb">
   <a href="/">Home</a> → Short Story
 </nav>
-
 <h1>Short Story</h1>
-
 <ul>
   {% assign stories = site.pages | where:"categories","short-story" | sort:"date" | reverse %}
   {% for story in stories %}
