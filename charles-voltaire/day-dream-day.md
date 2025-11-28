@@ -4,6 +4,7 @@ title: Day-dream-Day
 date: 2025-11-24
 author: Charles Voltaire
 categories: [poetry]
+permalink: /day-dream-day
 ---
 
 My eyes open slowly  
