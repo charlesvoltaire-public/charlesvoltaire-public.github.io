@@ -9,3 +9,7 @@ defaults:
       path: ""
     values:
       layout: default
+
+# favicon
+
+icon: /favicon.png
