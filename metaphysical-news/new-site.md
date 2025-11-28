@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: metaphysical-news
 title: New Site
 ---
 
