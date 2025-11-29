@@ -2,6 +2,7 @@
 layout: metaphysical-news
 title: New Site
 date: 2025-11-29
+author: Charles Voltaire
 categories: [metaphysical-news]
 permalink: /metaphysical-news/new-site/
 ---
