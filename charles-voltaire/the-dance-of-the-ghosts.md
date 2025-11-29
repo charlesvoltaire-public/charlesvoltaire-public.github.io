@@ -7,54 +7,54 @@ categories: [poetry]
 permalink: /charles-voltaire/the-dance-of-the-ghosts
 ---
 
-The dance of the ghosts In the fading twilight.  
-A bob of the head,  
-A whimper and cower,  
-The walls filled with whispers,  
-The door in a mirror,  
-Her eyes filled with blood,  
+The dance of the ghosts In the fading twilight.
+A bob of the head,
+A whimper and cower,
+The walls filled with whispers,
+The door in a mirror,
+Her eyes filled with blood,
 Les yeux de la mort en azure.
 
-The love was real  
-Immortal and sweet.  
-We cuddled with darkness  
-Advancing around us.  
-One hope,  
-One chance,  
-One slip through the cracks  
+The love was real
+Immortal and sweet.
+We cuddled with darkness
+Advancing around us.
+One hope,
+One chance,
+One slip through the cracks
 In the wall and my fingers.
 
-I woke and I ran,  
-I tried to catch up,  
-Tripping with every step,  
-Arrows from the tongue  
-Stinging the soul.  
-I died clutching for the mist  
+I woke and I ran,
+I tried to catch up,
+Tripping with every step,
+Arrows from the tongue
+Stinging the soul.
+I died clutching for the mist
 That was her green eyes.
 
-Reborn yet still alone,  
-I saw her again.  
-The paintbrushed hair in reverse,  
-The mirrored temptation of shame,  
-The heartache of loneliness,  
+Reborn yet still alone,
+I saw her again.
+The paintbrushed hair in reverse,
+The mirrored temptation of shame,
+The heartache of loneliness,
 The beautiful angry lifeless eyes of love.
 
-I hated her  
-As she danced on my grave  
-In the moonlight.  
-I laughed and I cried.  
-The friend I always wanted,  
-Not a real ghost,  
-But a ghost you can touch.  
-Those puppy dog eyes,  
+I hated her
+As she danced on my grave
+In the moonlight.
+I laughed and I cried.
+The friend I always wanted,
+Not a real ghost,
+But a ghost you can touch.
+Those puppy dog eyes,
 The ghost of a real ghost.
 
-I slumber alone now  
-In my dark room  
-Forever and ever,  
-And adorning my tomb,  
-Is her beautiful dance,  
-The inscription which writes,  
+I slumber alone now
+In my dark room
+Forever and ever,
+And adorning my tomb,
+Is her beautiful dance,
+The inscription which writes,
 "Give me one ghost in place of another."
 
 -- Voltaire
