@@ -4,7 +4,7 @@ title: Day-dream-Day
 date: 2016-05-01
 author: Charles Voltaire
 categories: [poetry]
-permalink: /day-dream-day
+permalink: /charles-voltaire/day-dream-day/
 ---
 
 My eyes open slowly  
