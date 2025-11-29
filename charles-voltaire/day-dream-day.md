@@ -8,7 +8,7 @@ permalink: /charles-voltaire/day-dream-day/
 ---
 
 My eyes open slowly
-and at first,
+and at first,  
 I don’t know where I am.
 
 The smile in my heart
