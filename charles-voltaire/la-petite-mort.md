@@ -4,7 +4,7 @@ title: La petite mort
 date: 2020-01-02
 author: Charles Voltaire
 categories: [poetry]
-permalink: /la-petite-mort/
+permalink: /charles-voltaire/la-petite-mort/
 ---
 
 There was no end  
