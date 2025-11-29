@@ -4,7 +4,7 @@ title: The Dance of the Ghosts
 date: 2019-01-02
 author: Charles Voltaire
 categories: [poetry]
-permalink: /the-dance-of-the-ghosts
+permalink: /charles-voltaire/the-dance-of-the-ghosts
 ---
 
 The dance of the ghosts In the fading twilight.  
