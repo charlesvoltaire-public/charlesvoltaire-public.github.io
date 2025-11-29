@@ -4,7 +4,7 @@ title: Le rossignol
 date: 2020-01-03
 author: Charles Voltaire
 categories: [poetry]
-permalink: /le-rossignol/
+permalink: /charles-voltaire/le-rossignol/
 ---
 
 When the sinking sun  
