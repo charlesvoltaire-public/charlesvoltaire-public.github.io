@@ -175,5 +175,5 @@ footer {
 
 /* Optional: add subtle stanza spacing only on blank lines */
 .prose p + p {
-  margin-top: 1.2em !important;         /* space only between stanzas */
+  margin-top: .6em !important;         /* space only between stanzas */
 }
