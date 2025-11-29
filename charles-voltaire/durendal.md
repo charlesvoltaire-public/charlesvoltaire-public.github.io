@@ -7,26 +7,26 @@ categories: [poetry]
 permalink: /charles-voltaire/durendal/
 ---
 
-As the sinking sun
-Is cloaked in black, 
-The time is near,
+As the sinking sun  
+Is cloaked in black,  
+The time is near,  
 No turning back.
-‍
-The steel of legend
-Bathed in red, 
-A mountain pass
+
+The steel of legend  
+Bathed in red,  
+A mountain pass  
 Where heroes bled.
-‍
-A clash of words
-Where shadows fight, 
-To hide the beard
+
+A clash of words  
+Where shadows fight,  
+To hide the beard  
 Of snowy white.
-‍
-When azure skies
-Reveal their hue, 
-The hidden truth
+
+When azure skies  
+Reveal their hue,  
+The hidden truth  
 Shall come to view.
-‍
+
 -- Voltaire
 
 ---
@@ -42,6 +42,6 @@ This applies retroactively to this post and any version of the work it contains.
 
 Let this be a gift to the commons —
 
-No rights reserved. 
+No rights reserved.
 
 — Charles Voltaire
