@@ -4,7 +4,7 @@ title: Suçon d’amour
 date: 2020-01-04
 author: Charles Voltaire
 categories: [poetry]
-permalink: /sucon-d-amour/
+permalink: /charles-voltaire/sucon-d-amour/
 ---
 
 Vient à moi  
