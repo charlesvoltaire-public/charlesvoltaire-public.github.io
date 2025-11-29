@@ -3,4 +3,10 @@ layout: metaphysical-news
 title: New Site
 ---
 
-This is the new site for The Voltaire Press
+New site relaunch for The Voltaire Press
+
+100% static, 0% designer fees.
+
+Jekyll + GitHub Pages + one very patient Grok (plus a couple cameos from Gemini & ChatGPT when Grok was napping).
+
+The robots are building the web now. Deal with it 😏
