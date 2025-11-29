@@ -4,7 +4,7 @@ title: Ma louvre
 date: 2025-07-10
 author: Charles Voltaire
 categories: [poetry]
-permalink: /ma-louvre/
+permalink: /charles-voltaire/ma-louvre/
 ---
 
 Within your walls, a steadfast flame,  
