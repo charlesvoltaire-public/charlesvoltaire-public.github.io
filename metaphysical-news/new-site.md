@@ -1,7 +1,9 @@
 ---
 layout: metaphysical-news
 title: New Site
+date: 2025-11-29
 categories: [metaphysical-news]
+permalink: /metaphysical-news/new-site/
 ---
 
 New site relaunch for The Voltaire Press
