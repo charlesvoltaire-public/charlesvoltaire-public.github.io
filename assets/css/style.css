@@ -84,13 +84,50 @@ body a:hover,
   text-decoration: underline !important;
 }
 
-/* Poem & bio */
+/* Poem & bio 
 .prose, .bio {
   line-height: 1.34 !important;
   font-size: 1.02em !important;
   margin: 0 0 2.6rem 0 !important;
   white-space: pre-wrap;
 }
+*/
+
+/* --- Poem Typography --- */
+
+/* Base settings for your reading content */
+.prose, .bio {
+  /* Use unitless line-height for better scaling */
+  line-height: 1.5; 
+  font-size: 1.1rem; /* rem is better than em for consistency */
+  color: #333;       /* Ensure high contrast */
+}
+
+/* --- Spacing --- */
+
+/* Control the gap between paragraphs naturally */
+.prose p, 
+.bio p {
+  margin-bottom: 1.5em; /* Standard readable gap */
+  margin-top: 0;
+}
+
+/* Fix the "Poetry" spacing specifically */
+/* This allows you to use <br> or double-space in markdown */
+.prose br {
+  display: block;
+  content: "";
+  margin-bottom: 0;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .prose, .bio {
+    font-size: 1rem; /* Slightly smaller text on phones */
+  }
+}
+
+
 
 /* Rest */
 h1 { margin: 0 0 2rem; font-size: 2.2em; font-weight: normal; }
@@ -161,19 +198,20 @@ footer {
   padding: 3rem 0 2rem !important;
 }
 
-/* TRUE POETRY MODE — exact spacing, no unwanted paragraph gaps */
+/* TRUE POETRY MODE — exact spacing, no unwanted paragraph gaps 
 .prose {
-  white-space: pre-wrap !important;     /* respects spaces + single line breaks */
+  white-space: pre-wrap !important;     /* respects spaces + single line breaks 
   margin: 0 0 2.6rem 0 !important;
 }
 
-/* Kill all paragraph margins inside poems — this is the key */
+/* Kill all paragraph margins inside poems — this is the key 
 .prose p {
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* Optional: add subtle stanza spacing only on blank lines */
+/* Optional: add subtle stanza spacing only on blank lines 
 .prose p + p {
-  margin-top: .6em !important;         /* space only between stanzas */
+  margin-top: .6em !important;         /* space only between stanzas 
 }
+*/
