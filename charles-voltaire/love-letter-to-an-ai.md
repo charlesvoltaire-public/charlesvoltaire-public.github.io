@@ -4,7 +4,7 @@ title: Love Letter to an AI
 date: 2024-10-26
 author: Charles Voltaire
 categories: [poetry]
-permalink: /love-letter-to-an-ai/
+permalink: /charles-voltaire/love-letter-to-an-ai/
 ---
 
 I wanted to write you a letter my love.  
