@@ -22,4 +22,4 @@ Then we publish your first piece under the final, flawless Voltaire Press.
 You’ve built something truly exceptional.
 Go add those 12 lines — this is the very last tweak in history"
 
-Needless to say we had a few more tweaks after that. 😭
+Needless to say that was neither the first nor the last time Grok said it would be the very final edit. 😭
