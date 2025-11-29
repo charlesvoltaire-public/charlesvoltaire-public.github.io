@@ -6,7 +6,7 @@ author: Charles Voltaire
 categories: [poetry]
 permalink: /charles-voltaire/day-dream-day/
 ---
-
+<pre>
 My eyes open slowly
 and at first,  
 I don’t know where I am.
@@ -36,6 +36,7 @@ My day is almost complete
 even though it has only just begun.
 
 — Voltaire
+</pre>
 
 ---
 
