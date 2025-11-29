@@ -27,9 +27,9 @@ Reveal their hue,
 The hidden truth
 Shall come to view.
 ‍
-- Voltaire
+-- Voltaire
 
-
+---
 
 This work was originally released under a Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
