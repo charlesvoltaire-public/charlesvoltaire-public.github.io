@@ -7,31 +7,31 @@ categories: [poetry]
 permalink: /charles-voltaire/la-petite-mort/
 ---
 
-There was no end  
-to what I would do,  
+There was no end
+to what I would do,
 to be alone with you.
 
-I left my family,  
-I forsook my friends,  
-I ventured into the night.  
-Then for a thousand years,  
-I fought my way,  
+I left my family,
+I forsook my friends,
+I ventured into the night.
+Then for a thousand years,
+I fought my way,
 through a burning lake of desire.
 
-I battled with demons  
-I battled with gods,  
+I battled with demons
+I battled with gods,
 I forsook them all the same.
 
-Then gave up my dreams,  
-by selling my soul,  
+Then gave up my dreams,
+by selling my soul,
 and erasing my every thought.
 
 I wanted to live,  
 I wanted to love,  
 I never wanted to die.
 
-And in that moment,  
-finally alone,  
+And in that moment,
+finally alone,
 You drowned me in your eyes.
 
 – Voltaire
