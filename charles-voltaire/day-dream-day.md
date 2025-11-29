@@ -7,32 +7,32 @@ categories: [poetry]
 permalink: /charles-voltaire/day-dream-day/
 ---
 
-My eyes open slowly  
-and at first,  
+My eyes open slowly
+and at first,
 I don’t know where I am.
 
-The smile in my heart  
-slowly creeps onto my face  
-as I smell the warm scent of you  
+The smile in my heart
+slowly creeps onto my face
+as I smell the warm scent of you
 on the sheets.
 
-My first thought...  
-I run my hand softly down your skin  
-and as my hand begins to rise,  
+My first thought...
+I run my hand softly down your skin
+and as my hand begins to rise,
 we lock eyes.
 
-Cold sea water.  
-I’m floating on the surface at sunrise.  
-A cool offshore breeze  
-and warm coffee  
+Cold sea water.
+I’m floating on the surface at sunrise.
+A cool offshore breeze
+and warm coffee
 greets me on board.
 
-Gently bobbing,  
-your windswept hair  
-painted on your face.  
+Gently bobbing,
+your windswept hair
+painted on your face.
 A soft hum rolls across your lips.
 
-My day is almost complete  
+My day is almost complete
 even though it has only just begun.
 
 — Voltaire
