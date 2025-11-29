@@ -1,6 +1,7 @@
 ---
 layout: metaphysical-news
 title: New Site
+categories: [metaphysical-news]
 ---
 
 New site relaunch for The Voltaire Press
