@@ -26,8 +26,8 @@ Then gave up my dreams,
 by selling my soul,
 and erasing my every thought.
 
-I wanted to live,  
-I wanted to love,  
+I wanted to live,
+I wanted to love,
 I never wanted to die.
 
 And in that moment,
