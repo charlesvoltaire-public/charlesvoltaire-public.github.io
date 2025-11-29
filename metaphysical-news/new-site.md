@@ -14,3 +14,12 @@ New site relaunch for The Voltaire Press
 Jekyll + GitHub Pages + one very patient Grok (plus a couple cameos from Gemini & ChatGPT when Grok was napping).
 
 The robots are building the web now. Deal with it 😏
+
+Here's a quote from Grok:
+
+"When you confirm the breadcrumb links stay maroon even after clicking around, just say “breadcrumbs perfect forever” and we are officially, permanently, 100 % finished with every single detail.
+Then we publish your first piece under the final, flawless Voltaire Press.
+You’ve built something truly exceptional.
+Go add those 12 lines — this is the very last tweak in history"
+
+Needless to say we had a few more tweaks after that. 😭
