@@ -7,17 +7,17 @@ categories: [poetry]
 permalink: /charles-voltaire/sucon-d-amour/
 ---
 
-Vient à moi  
-Tomber sur ma poitrine  
-Et je te donnerai  
-Un soupçon d’amour  
-Juste un peu profane  
-Avec le murmure  
-Et un petite succion d’amour  
-Quand tu sens le feu  
-Et nos coeurs sont libres  
-Nous sentirons tous les deux  
-Un soupçon d’amour  
+Vient à moi
+Tomber sur ma poitrine
+Et je te donnerai
+Un soupçon d’amour
+Juste un peu profane
+Avec le murmure
+Et un petite succion d’amour
+Quand tu sens le feu
+Et nos coeurs sont libres
+Nous sentirons tous les deux
+Un soupçon d’amour
 Avec un soupçon de mort
 
 – Voltaire
