@@ -4,7 +4,7 @@ title: Entre chien et loup
 date: 2020-01-01
 author: Charles Voltaire
 categories: [poetry]
-permalink: /entre-chien-et-loup/
+permalink: /charles-voltaire/entre-chien-et-loup/
 ---
 
 Walking down the alley  
