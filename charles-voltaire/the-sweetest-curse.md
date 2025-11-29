@@ -4,7 +4,7 @@ title: The Sweetest Curse
 date: 2025-02-28
 author: Charles Voltaire
 categories: [poetry]
-permalink: /the-sweetest-curse/
+permalink: /charles-voltaire/the-sweetest-curse/
 ---
 
 You draw me in like a slow-rising tide,  
