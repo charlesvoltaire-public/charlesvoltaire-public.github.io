@@ -7,52 +7,52 @@ categories: [poetry]
 permalink: /charles-voltaire/entre-chien-et-loup/
 ---
 
-Walking down the alley  
-The evening star arrives  
-Another day has passed  
-It’s time again  
-The fading of the light  
-Patterns of crimson and pink  
-Dwindling fires of neon hues  
-As I’m heading home  
-I’ll squeeze the sun  
+Walking down the alley
+The evening star arrives
+Another day has passed
+It’s time again
+The fading of the light
+Patterns of crimson and pink
+Dwindling fires of neon hues
+As I’m heading home
+I’ll squeeze the sun
 Till its very final drop
 
-I hate when the wind  
-Picks up like this  
-The creaky open door  
-Are you ready to do it all again  
-Are you ready for the shadows  
-Shadows which fall upon shadows  
-Crowding out glowing patches  
-Will you remember  
-Did you forget  
+I hate when the wind
+Picks up like this
+The creaky open door
+Are you ready to do it all again
+Are you ready for the shadows
+Shadows which fall upon shadows
+Crowding out glowing patches
+Will you remember
+Did you forget
 Here comes the twilight
 
-You take a look  
-Out over the field  
-Eyes straining to see  
-And in the silence  
-There echoes and resonates  
-The beautiful sound of dusk  
-Why did you wait  
-You took so long  
-Who’s watching you from the dark  
-Is it man’s best friend  
-Do you know their scent  
-Will you know them  
+You take a look
+Out over the field
+Eyes straining to see
+And in the silence
+There echoes and resonates
+The beautiful sound of dusk
+Why did you wait
+You took so long
+Who’s watching you from the dark
+Is it man’s best friend
+Do you know their scent
+Will you know them
 For who they are
 
-Last call  
-The sun is almost gone  
-Are you sure you’re ready  
-Maybe you’d rather call it a night  
-Go sit by the fireplace  
-Someplace safe and warm  
-Do you remember yet  
-What you forgot  
-When the time arrives  
-Breath in deeply  
+Last call
+The sun is almost gone
+Are you sure you’re ready
+Maybe you’d rather call it a night
+Go sit by the fireplace
+Someplace safe and warm
+Do you remember yet
+What you forgot
+When the time arrives
+Breath in deeply
 Remember the moonless night
 
 – Voltaire
