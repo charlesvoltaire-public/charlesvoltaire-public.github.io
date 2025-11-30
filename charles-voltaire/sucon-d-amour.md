@@ -1,7 +1,7 @@
 ---
 layout: poem
 title: Suçon d’amour
-date: 2020-01-04
+date: 2021-10-01
 author: Charles Voltaire
 categories: [poetry]
 permalink: /charles-voltaire/sucon-d-amour/
