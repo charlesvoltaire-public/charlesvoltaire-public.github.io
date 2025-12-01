@@ -1,7 +1,7 @@
 ---
 layout: poem
 title: Le rossignol
-date: 2020-01-03
+date: 2020-01-04
 author: Charles Voltaire
 categories: [poetry]
 permalink: /charles-voltaire/le-rossignol/
