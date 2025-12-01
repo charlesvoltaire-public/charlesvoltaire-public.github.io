@@ -1,7 +1,7 @@
 ---
 layout: poem
 title: La petite mort
-date: 2019-01-01
+date: 2016-10-30
 author: Charles Voltaire
 categories: [poetry]
 permalink: /charles-voltaire/la-petite-mort/
