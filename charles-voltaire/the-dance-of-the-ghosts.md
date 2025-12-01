@@ -1,7 +1,7 @@
 ---
 layout: poem
 title: The Dance of the Ghosts
-date: 2019-01-02
+date: 2019-01-01
 author: Charles Voltaire
 categories: [poetry]
 permalink: /charles-voltaire/the-dance-of-the-ghosts
