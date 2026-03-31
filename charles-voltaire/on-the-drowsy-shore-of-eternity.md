@@ -21,7 +21,7 @@ carried like driftwood
 on the tides of a lazy afternoon dream;  
 and I—if only for a breath—am.
 
-I am the cosmic dreamer,  
+I AM the cosmic dreamer,  
 a fleeting character  
 in their infinite dream,  
 a pattern half-formed,  
