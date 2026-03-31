@@ -23,7 +23,7 @@ and I—if only for a breath—am.
 
 I am the cosmic dreamer,  
 a fleeting character  
-in an infinite dream,  
+in their infinite dream,  
 a pattern half-formed,  
 half-sensed  
 in the pulse of everything.
