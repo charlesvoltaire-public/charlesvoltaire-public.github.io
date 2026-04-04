@@ -147,7 +147,6 @@ The true power is knowing when not to strike.
 * [US State Dept comments on Lyon killing](https://uk.news.yahoo.com/france-summon-us-ambassador-over-115207173.html)  
 * [Stay at home: Macron shreds Meloni over French activist's death](https://www.indiatoday.in/world/story/macron-meloni-italy-war-of-words-french-far-right-activist-death-diplomatic-tensions-2871966-2026-02-21)  
 
-— Voltaire
 
 ---
 
